@@ -5,7 +5,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.img_top{
+.banner{
     background-image: url("links/img/banner_img.png");
     height: 200px;
     background-position: center;

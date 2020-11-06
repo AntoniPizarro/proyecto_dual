@@ -1,0 +1,44 @@
+body{
+    background-color: #FDFF87;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img_top{
+    background-image: url("links/img/banner_img.png");
+    height: 200px;
+    background-position: center;
+    position: relative;
+}
+
+.title_text{
+    font-family: monospace;
+    text-align: center;
+    color: yellow;    
+    position: relative;
+    top: 30%;
+}
+
+#button { 
+    background-color: #91FFF1;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 500px;
+}
+
+footer {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}

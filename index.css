@@ -1,6 +1,7 @@
 body{
     background-color: #FDFF87;
     font-family: Arial, Helvetica, sans-serif;
+    cursor:url(./links/img/cursor.png),auto;
 }
 
 .banner{
@@ -67,7 +68,7 @@ div.menu {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
-  }
+}
 
 div.menu a {
     display: inline-block;
@@ -75,8 +76,8 @@ div.menu a {
     text-align: center;
     padding: 14px;
     text-decoration: none;
-  }
+}
 
   div.menu a:hover {
     background-color: #777;
-  }
+}

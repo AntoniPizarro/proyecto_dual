@@ -61,6 +61,22 @@ footer {
 
 .centrado{
     text-align: center;
-    background: center;
-    background-color: #424242;
 }
+
+div.menu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.menu a:hover {
+    background-color: #777;
+  }

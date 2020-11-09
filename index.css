@@ -1,6 +1,7 @@
 body{
     background-color: #FDFF87;
     font-family: Arial, Helvetica, sans-serif;
+    cursor:url(./links/img/cursor.png),auto;
 }
 
 .banner{

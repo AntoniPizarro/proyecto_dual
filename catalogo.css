@@ -10,7 +10,7 @@ body{
 .title_text{
     font-family: monospace;
     text-align: center;
-    color: yellow;    
+    color: black;    
     position: relative;
     top: 30%;
 }
@@ -19,14 +19,6 @@ body{
         height: 200px;
         background-position: center;
         position: relative;
-}
-
-.title_text{
-    font-family: monospace;
-    text-align: center;
-    color: yellow;    
-    position: relative;
-    top: 30%;
 }
 
 .list_category{

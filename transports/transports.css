@@ -1,0 +1,56 @@
+body{
+    background-color: #131212;
+    cursor:url(../links/img/cursor-flecha.png),auto;
+}
+.banner{
+    background-image: url("../links/img/banner_img.png");
+    height: 200px;
+    background-position: center;
+}
+.title_text{
+    font-family: monospace;
+    text-align: center;
+    color: yellow;    
+    position: relative;
+    top: 30%;
+}
+div.menu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+div.menu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+div.menu a:hover {
+    background-color: #777;
+}
+.caracteristicas{
+    padding-left: 0px;
+    font-size: 15px;
+}
+.content {
+    padding: 20px;
+    overflow: hidden;
+}
+.content img {
+    height: 300px;
+    margin-right: 15px;
+    float: left;
+}
+.content h2{
+    margin-left: 15px;
+    display: inline;
+    margin: 2px 0 0 0;
+    font-size: 50px;
+}
+footer{
+    color: white;
+    margin-top:50px;
+    width:100%;
+    height:20px;
+}

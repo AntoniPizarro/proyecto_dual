@@ -1,6 +1,6 @@
 import os
 archivo = "Mi nave"
-direccion = r"C:\Users\Granpepinillo\Desktop\\"
+direccion = r"C:\Users\Toni\Desktop\\"
 file = open(direccion + archivo + ".html", "w")
 file.write("<!DOCTYPE html>" + os.linesep)
 file.write("<html lang=\"en\">" + os.linesep)

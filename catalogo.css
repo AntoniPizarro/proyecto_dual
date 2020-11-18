@@ -1,21 +1,24 @@
 body{
     background-color: #131212;
-    cursor:url(./links/img/cursor.png),auto;
+    cursor:url(./links/img/cursor-flecha.png),auto;
 }
-
+.banner{
+    background-image: url("links/img/banner_img.png");
+    height: 200px;
+    background-position: center;
+}
+.title_text{
+    font-family: monospace;
+    text-align: center;
+    color: black;    
+    position: relative;
+    top: 30%;
+}
 .color_top{
         background-color: #FBF532;
         height: 200px;
         background-position: center;
         position: relative;
-}
-
-.title_text{
-    font-family: monospace;
-    text-align: center;
-    color: rgb(2, 2, 1);    
-    position: relative;
-    top: 30%;
 }
 
 .list_category{
@@ -44,7 +47,9 @@ p{
 }
 
 .div_img{
-    padding-top: 100px ;
+    text-align: center;
+    height: 200px;
+    width: 800px;
 }
 div.menu {
     background-color: #333;
@@ -60,6 +65,36 @@ div.menu a {
     text-decoration: none;
 }
 
-  div.menu a:hover {
+div.menu a:hover {
     background-color: #777;
+}
+footer {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+a:link {
+    color: yellow;
+    text-decoration: none;
+}
+ 
+a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+  
+a:active {
+    color: yellow;
+    text-decoration: underline;
+}
+.caracteristicas{
+    text-align: left;
+    display: block;
 }

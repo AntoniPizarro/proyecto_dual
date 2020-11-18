@@ -2,23 +2,19 @@ body{
     background-color: #131212;
     cursor:url(./links/img/cursor-flecha.png),auto;
 }
+
 .banner{
     background-image: url("links/img/banner_img.png");
     height: 200px;
     background-position: center;
 }
+
 .title_text{
     font-family: monospace;
     text-align: center;
-    color: black;    
+    color: yellow;    
     position: relative;
     top: 30%;
-}
-.color_top{
-        background-color: #FBF532;
-        height: 200px;
-        background-position: center;
-        position: relative;
 }
 
 .list_category{
@@ -47,10 +43,9 @@ p{
 }
 
 .div_img{
-    text-align: center;
-    height: 200px;
-    width: 800px;
+    padding-top: 100px;
 }
+
 div.menu {
     background-color: #333;
     overflow: auto;
@@ -68,6 +63,7 @@ div.menu a {
 div.menu a:hover {
     background-color: #777;
 }
+
 footer {
     background-color: black;
     color: yellow;
@@ -75,6 +71,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 a:link {
     color: yellow;
     text-decoration: none;
@@ -84,17 +81,13 @@ a:visited {
     color: yellow;
     text-decoration: none;
 }
-  
+
 a:hover {
     color: red;
     text-decoration: underline;
 }
-  
+
 a:active {
     color: yellow;
     text-decoration: underline;
-}
-.caracteristicas{
-    text-align: left;
-    display: block;
 }

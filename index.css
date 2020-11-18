@@ -31,7 +31,6 @@ footer {
     display: inline;
     font-size: 20px;
     color: yellow;
-    text-align: center
 }
 .content {
     padding: 20px;
@@ -48,17 +47,21 @@ footer {
     margin: 2px 0 0 0;
     font-size: 50px;
 }
+
 .box{
     background-color: #424242;
 }
+
 .centrado{
     text-align: center;
 }
+
 div.menu {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
 }
+
 div.menu a {
     display: inline-block;
     color: white;
@@ -66,6 +69,7 @@ div.menu a {
     padding: 14px;
     text-decoration: none;
 }
+
 div.menu a:hover {
     background-color: #777;
 }

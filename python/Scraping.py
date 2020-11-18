@@ -1,6 +1,8 @@
 # Obtener codigo html
 
 import requests
-url = '...'
-r = requests.get(url)
-r.content
+
+def obtenerCodigo(url):
+    r = requests.get(url)
+    codigoWeb = r.text
+    print(codigoWeb)

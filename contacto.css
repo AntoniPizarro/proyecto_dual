@@ -58,4 +58,10 @@ li {
     color: yellow;
     text-decoration: underline;
     font-weight: bold;
+    padding-top: 70px;
+    padding-bottom: 25pxpx;
+}
+
+.ultimoContacto{
+    margin-bottom: 50px;
 }

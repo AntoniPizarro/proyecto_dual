@@ -86,34 +86,11 @@ div.menu a:hover {
     color:#FBF532;
 }
 
-.img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-h3{
-    text-align: center
-}
-
-p{
-    text-align: center  
-}
-
-.div_img{
-    padding-top: 100px;
-}
-
 a:link {
     color: yellow;
     text-decoration: none;
 }
- 
+
 a:visited {
     color: yellow;
     text-decoration: none;
@@ -129,7 +106,63 @@ a:active {
     text-decoration: underline;
 }
 
-/*ESTILOS DE CONTACTO*/
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.div_img{
+    padding-top: 100px;
+}
+    div.gallery {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 90px;
+        padding: 10px;
+        float: left;
+        width: 300px;
+    }
+
+    
+    div.gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+        
+    .hover08 figure img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    
+    }
+    .hover08 figure:hover img {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    
+    div.desc {
+        margin-left: 40px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        text-align: center;
+        color: yellow;
+        border-radius: 10px;
+        height: 80px;
+        width: 220px;
+    }
+    
+    /*ESTILOS DE CONTACTO*/
 
 li {
     font-size: 20px;
@@ -148,3 +181,10 @@ li {
     color: yellow;
     text-align: center;
 }
+
+
+
+
+
+
+    

@@ -2,7 +2,7 @@
 body{
     background-color: #FDFF87;
     font-family: Arial, Helvetica, sans-serif;
-    cursor:url(./links/img/cursor.png),auto;
+    cursor:url(links/img/cursor-flecha.png),auto;
 }
 
 .banner{
@@ -148,6 +148,28 @@ li {
     font-size: 20px;
     color: yellow;
     text-align: center;
+}
+
+/*ESTLIOS PARA LOS ENLACES A LAS GAMMAS*/
+
+a:link {
+    color: yellow;
+    text-decoration: none;
+}
+ 
+a:visited {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    text-decoration: underline;
 }
 
 

@@ -1,4 +1,4 @@
-#22/11/2020 - 18:56 - 20:17
+#22/11/2020 - 18:56 - 21:07
 def obtenerDatos(codigo):
     #Obtenemos los campos de la nave
     modelo = codigo[codigo.find("<h3>") + 4 : codigo.find(" - ")]

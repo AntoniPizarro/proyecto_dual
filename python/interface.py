@@ -2,6 +2,9 @@
 #https://docs.python.org/3/library/tk.html
 
 import tkinter
+from Scraping import obtenerDatos
+from Scraping import obtenerCodigo
+from PythonToMongo import insertarUno
 
 ventana = tkinter.Tk() #Crear ventana
 ventana.geometry("500x300") #Establecer dimensiones
@@ -27,7 +30,18 @@ cajaTexto.pack() #Mostrar campo de entrada
 escribir = tkinter.Button(ventana, text = "Mostrar texto", padx = 30, pady = 10, command = lambda: printear(cajaTexto.get())) #Crear un boton en la ventana con el texto personalizado con dimensiones de 30 de largo y 10 de alto que ejecuta la funcion "saludo" con unos parametros
 escribir.pack()
 """
-
+def insertarDato(link):
+    insertarUno(obtenerDatos(obtenerCodigo(link)))
+    cajaTexto.delete(0, tkinter.END)
+etiqueta1 = tkinter.Label(ventana, text = "url")
+etiqueta1.pack()
+cajaTexto = tkinter.Entry(ventana)
+cajaTexto.pack()
+etiqueta2 = tkinter.Label(ventana, text = "")
+etiqueta2.pack()
+insercion = tkinter.Button(ventana, text = "Insertar en la BD", command = lambda: insertarDato(cajaTexto.get()))
+insercion.pack(side = tkinter.BOTTOM)
+"""
 boton1 = tkinter.Button(ventana, text = "A", width = 10, height = 5)
 boton2 = tkinter.Button(ventana, text = "B", width = 10, height = 5)
 boton3 = tkinter.Button(ventana, text = "C", width = 10, height = 5)
@@ -35,5 +49,6 @@ boton3 = tkinter.Button(ventana, text = "C", width = 10, height = 5)
 boton1.grid(row = 0, column = 0)
 boton2.grid(row = 0, column = 1)
 boton3.grid(row = 0, column = 2)
+"""
 
 ventana.mainloop() #Mantener ventana abierta

@@ -51,8 +51,9 @@ def webCrawler(seed):
 
 
 if __name__ == "__main__":
-    assert webCrawler("https://proyectodual.000webhostapp.com/") == [
-        'https://proyectodual.000webhostapp.com/', './contacto.html', './catalogo.html', 'baja.html', 'media.html', 'alta.html', './index.html']
+    #assert webCrawler("https://proyectodual.000webhostapp.com/") == ['https://proyectodual.000webhostapp.com/', './contacto.html', './catalogo.html', 'baja.html', 'media.html', 'alta.html', './index.html']
+    assert webCrawler("https://paulk123.000webhostapp.com/") == [
+        'https://paulk123.000webhostapp.com/', 'audios.html', 'videos.html', 'movie_rank.html', 'Free_Lily.html']
 
 
 """

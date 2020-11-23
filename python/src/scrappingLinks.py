@@ -36,6 +36,8 @@ def getLinks(url):
 
 
 def union(p, q):
+    if type(p) != list or type(q) != list:
+        return False
     for e in q:
         if e not in p:
             p.append(e)

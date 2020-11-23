@@ -1,4 +1,4 @@
-from src.obtenerCodigo import obtenerCodigo
+from src.scrappingLinks import obtenerCodigo
 import pytest
 import requests
 # pytest -v test/obtenerCodigo.py

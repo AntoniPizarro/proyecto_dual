@@ -3,21 +3,6 @@ import os
 #{'nombre':'', 'marca':'', 'archivo':'', 'gama':'', 'color':'', 'img_dir':'', 'img_alt':'', 'capacidad':0, 'caracteristicas':[]}
 #{'nombre':'', 'marca':'', 'archivo':'', 'gama':'', 'color':'', 'img_dir':'', 'img_alt':'', 'capacidad':0, 'caracteristicas':[]}
 
-#1.-Turbo laser
-#2.-Cañones de iones
-#3.-Artilleria
-#4.-Torpedos
-#5.-Misileros
-#6.-Escudos
-#7.-Hipervelocidad
-#8.-Camuflaje
-#9.-Patas extensibles
-#10.-Puente de mando
-#11.-Cabina
-#12.-Camara de carga
-#13.-Hangar
-#14.-Puerto
-#15.-Velas solares
 
 
 def crearPagina(nombre, marca, archivo, gama, color, img_dir, img_alt, capacidad, caracteristicas):

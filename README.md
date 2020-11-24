@@ -5,8 +5,6 @@
 [![python version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue)](https://github.com/AntoniPizarro/proyecto_dual)
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](https://github.com/AntoniPizarro/proyecto_dual)
 
-> ---
-
 ## Tabla de contenidos
 
 1. [Motivación](#motivación)

@@ -38,6 +38,7 @@ def obtenerDatos(codigo):
         codigo = codigo[codigo.find("</p>") + 4:]
     nave = {'modelo': modelo, 'marca': marca, 'gama': gama, 'tasa': tasa,
             'color': color, 'plazas': plazas, 'caracteristicas': caracteristicas}
+    print(nave)
     return nave
 
 
@@ -78,6 +79,8 @@ def union(p, q):
 
 
 def webCrawler(seed):
+    banedLinks = ["https://proyectodual.000webhostapp.com/",
+                  "./catalogo.html", "../catalogo.html"]
     toCrawl = [seed]
     crawled = []
     while toCrawl:
@@ -86,11 +89,10 @@ def webCrawler(seed):
             union(toCrawl, getLinks(obtenerCodigo(page)))
             crawled.append(page)
     for link in crawled:
-        if link == "https://proyectodual.000webhostapp.com/" or link == "./catalogo.html":
-            pass
-        else:
+        if link not in banedLinks:
             obtenerDatos(obtenerCodigo(link))
-            print(obtenerDatos)
+        else:
+            pass
     return crawled
 
 

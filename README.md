@@ -12,8 +12,8 @@
 1. [Código de Ejemplo](#codigo-de-ejemplo)
 1. [Tests](#tests)
 1. [Contribución](#contribución)
+1. [Colaboradores](#colaboradores)
    <!---1. [How to use?](#HowToUse)-->
-   <!---1. [Creditos](#Creditos)-->
    <!---1. [Licencia](#Licencia)-->
    <!---2. [Estado de Construcción](#EstadodeConstruccion)-->
    <!---6. [Instalación](#Instalación)-->
@@ -27,6 +27,12 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 **[⬆ back to top](#table-of-contents)**
 
 ---
+
+## Code style
+
+El formato del código de nuestro proyecto es estandar.
+
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## Tecnologías Usadas
 
@@ -46,7 +52,7 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 - [x] Almacena la información en una base de datos
 - [x] No se requiere registro o inicio de sesión
 - [ ] Actualizaciones automáticas
-- [ ] Ejecución automáticamente
+- [ ] Ejecución automática
 
 **[⬆ back to top](#table-of-contents)**
 

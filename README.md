@@ -5,8 +5,6 @@
 [![python version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue)](https://github.com/AntoniPizarro/proyecto_dual)
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](https://github.com/AntoniPizarro/proyecto_dual)
 
-> ---
-
 ## Tabla de contenidos
 
 1. [Motivación](#motivación)
@@ -14,12 +12,12 @@
 1. [Features](#features)
 1. [Código de Ejemplo](#codigo-de-ejemplo)
 1. [Tests](#tests)
+1. [Guia de Uso](#guia-de-uso)
+1. [Instalación](#instalación)
 1. [Contribución](#contribución)
 1. [Colaboradores](#colaboradores)
-   <!---1. [How to use?](#HowToUse)-->
-   <!---1. [Licencia](#Licencia)-->
-   <!---2. [Estado de Construcción](#EstadodeConstruccion)-->
-   <!---6. [Instalación](#Instalación)-->
+1. [Licencia](#licencia)
+<!---Estado de construcción-->
 
 ---
 
@@ -30,12 +28,6 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 **[⬆ back to top](#table-of-contents)**
 
 ---
-
-## Code style
-
-El estilo de codigo que hemos usado para nuestro proyecto es el pycodestyle.
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ## Tecnologías Usadas
 
@@ -73,6 +65,18 @@ El estilo de codigo que hemos usado para nuestro proyecto es el pycodestyle.
 
 ---
 
+## Guia de Uso
+
+**[⬆ back to top](#table-of-contents)**
+
+---
+
+## Instalación
+
+**[⬆ back to top](#table-of-contents)**
+
+---
+
 ## Contribución
 
 > Para contribuir en nuestro proyecto, simplemente deberás seguir los siguientes pasos:
@@ -94,3 +98,7 @@ El estilo de codigo que hemos usado para nuestro proyecto es el pycodestyle.
 **[⬆ back to top](#table-of-contents)**
 
 ---
+
+## Licencia
+
+**[⬆ back to top](#table-of-contents)**

@@ -18,11 +18,15 @@
    <!---2. [Estado de Construcción](#EstadodeConstruccion)-->
    <!---6. [Instalación](#Instalación)-->
 
+---
+
 ## Motivación
 
 Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año de _Formación Profesional de Desarrollo Web_. Gracias a la autonomía y participación de sus colaboradores y a la estimulación del reto de sus objetivos.
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ## Tecnologías Usadas
 
@@ -46,13 +50,19 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ## Codigo de ejemplo
 
 **[⬆ back to top](#table-of-contents)**
 
+---
+
 ## Tests
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ## Contribución
 
@@ -66,6 +76,12 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 
 **[⬆ back to top](#table-of-contents)**
 
-## Creditos
+---
+
+## Colaboradores
+
+- [Ver Colaboradores](https://github.com/AntoniPizarro/proyecto_dual/pulse)
 
 **[⬆ back to top](#table-of-contents)**
+
+---

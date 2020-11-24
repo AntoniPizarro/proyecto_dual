@@ -22,7 +22,7 @@ def getLinks(url):
         codigo = obtenerCodigo(url)
     listaLinks = []
     while True:
-        inicio_href = codigo.find("<a href=")
+        inicio_href = codigo.find("href=")
         inicio_url = codigo.find('"', inicio_href)
         fin_url = codigo.find('"', inicio_url + 1)
         if len(codigo) == 0:
@@ -30,8 +30,12 @@ def getLinks(url):
         elif inicio_href == -1:
             break
         else:
-            listaLinks.append(codigo[inicio_url + 1: fin_url])
-            codigo = codigo[fin_url:]
+            link = codigo[inicio_url + 1: fin_url]
+            if link.find("html") == -1:
+                codigo = codigo[fin_url:]
+            else:
+                listaLinks.append(codigo[inicio_url + 1: fin_url])
+                codigo = codigo[fin_url:]
     return listaLinks
 
 

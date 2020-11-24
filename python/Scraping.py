@@ -61,7 +61,6 @@ def getLinks(url):
             else:
                 listaLinks.append(codigo[inicio_url + 1: fin_url])
                 codigo = codigo[fin_url:]
-    print(listaLinks)
     return listaLinks
 
 
@@ -88,15 +87,14 @@ def webCrawler(seed):
 
 if __name__ == "__main__":
 
-    # assert union(["a", "b", "d", "g", "h"], ["a", "b", "c", "d", "e", "f", "g", "h", "i"]) == ["a", "b", "d", "g", "h", "c", "e", "f", "i"]
-    # assert webCrawler("https://proyectodual.000webhostapp.com/") == ['https://proyectodual.000webhostapp.com/', './contacto.html', './catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html','transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html']
-    # assert webCrawler("https://paulk123.000webhostapp.com/") == ['https://paulk123.000webhostapp.com/', 'audios.html', 'videos.html', 'movie_rank.html', 'Free_Lily.html']
+    assert webCrawler("https://paulk123.000webhostapp.com/") == [
+        'https://paulk123.000webhostapp.com/', 'test-html.html', 'audios.html', 'videos.html', 'movie_rank.html', 'Free_Lily.html']
 
-    # assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/")) == ["./index.html", "./catalogo.html", "./contacto.html"]
+    #assert webCrawler("https://proyectodual.000webhostapp.com/catalogo.html") == ['https://proyectodual.000webhostapp.com/catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html', 'transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './contacto.html', './catalogo.html', './index.html']
 
-    # assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/catalogo.html")) == ['./index.html', './catalogo.html', './contacto.html', 'alta.html', 'media.html', 'baja.html', 'transports/y-wing.html','transports/t70-xwing.html', 'transports/magna-guard.html', 'transports/neimoidian-escort.html', 'transports/cañonera-republica.html', 'transports/twilight.html', 'transports/aa-9.html', 'transports/crucero-alderaan.html', 'transports/gr-75.html', 'transports/imperial-shuttle.html', 'transports/v-wing.html']
-    # assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/contacto.html")) == ['./index.html', './catalogo.html', './contacto.html']
-    #assert getLinks(obtenerCodigo("https://paulk123.000webhostapp.com/")) == ['Free_Lily.html', 'movie_rank.html', 'videos.html', 'audios.html', 'test-html.html']
-    #assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")) == ['../index.html', '../catalogo.html', '../contacto.html']
-    assert getLinks(obtenerCodigo(
-        "https://paulk123.000webhostapp.com/movie_rank.html")) == ['Free_Lily.html', 'movie_rank.html', 'videos.html', 'audios.html']
+    #assert webCrawler("https://proyectodual.000webhostapp.com/index.html") == ['https://proyectodual.000webhostapp.com/index.html', './contacto.html', './catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html', 'transports/crucero-alderaan.html','transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html']
+
+    #assert webCrawler("https://proyectodual.000webhostapp.com/contacto.html") == ['https://proyectodual.000webhostapp.com/contacto.html', './contacto.html', './catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html', 'transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html']
+
+    assert webCrawler(
+        "https://proyectodual.000webhostapp.com/transports/y-wing.html") == ['https://proyectodual.000webhostapp.com/transports/y-wing.html', '../contacto.html', './contacto.html', './catalogo.html', 'transports/v-wing.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html', 'transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html', '../catalogo.html', '../index.html']

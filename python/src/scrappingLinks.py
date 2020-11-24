@@ -6,13 +6,19 @@ def obtenerCodigo(webCrawler):
         "https://proyectodual.000webhostapp.com/1981781ji98p7654yrtgfhjkliop897i6u54yerdgtfhjkuio98")
     if type(webCrawler) != str or len(webCrawler) < 1:
         return False
+    else:
+        pass
     cabecera = "https://proyectodual.000webhostapp.com/"
     if webCrawler.find('https') == -1:
         webCrawler = cabecera + webCrawler
+    else:
+        pass
     r = requests.get(webCrawler)
     codigoWeb = r.text
     if codigoWeb == inexistent.text:
         return False
+    else:
+        pass
     return codigoWeb
 
 
@@ -20,6 +26,8 @@ def getLinks(url):
     codigo = url
     if url == -1:
         codigo = obtenerCodigo(url)
+    else:
+        pass
     listaLinks = []
     while True:
         inicio_href = codigo.find("href=")
@@ -45,6 +53,8 @@ def union(p, q):
     for e in q:
         if e not in p:
             p.append(e)
+        else:
+            pass
     return p
 
 
@@ -56,4 +66,6 @@ def webCrawler(seed):
         if page not in crawled:
             union(toCrawl, getLinks(obtenerCodigo(page)))
             crawled.append(page)
+        else:
+            pass
     return crawled

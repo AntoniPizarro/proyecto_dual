@@ -2,7 +2,7 @@
 
 > En este repositorio se encuentra el contenido de nuestro software de Web Scrapping, con el cual podreís escrapear cualquier sito web que siga el protocolo "htpps".
 
-> [python version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue) [status application](https://img.shields.io/badge/status-stable-brightgreen)
+> [[python version](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue)] [status application](https://img.shields.io/badge/status-stable-brightgreen)
 >
 > ---
 

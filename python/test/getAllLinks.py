@@ -30,5 +30,29 @@ def test_linksNaveCatalogo():
 
 
 def test_CatalogoLinks():
-    assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/catalogo.html")) == ['./index.html', './catalogo.html', './contacto.html', 'alta.html', 'media.html', 'baja.html', 'transports/y-wing.html',
-                                                                                               'transports/t70-xwing.html', 'transports/magna-guard.html', 'transports/neimoidian-escort.html', 'transports/cañonera-republica.html', 'transports/twilight.html', 'transports/aa-9.html', 'transports/crucero-alderaan.html', 'transports/gr-75.html', 'transports/imperial-shuttle.html', 'transports/v-wing.html']
+    assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/catalogo.html")) == ['./index.html', './catalogo.html', './contacto.html', 'alta.html', 'media.html', 'baja.html', 'transports/y-wing.html', 'transports/t70-xwing.html', 'transports/magna-guard.html',
+                                                                                               'transports/neimoidian-escort.html', 'transports/cañonera-republica.html', 'transports/twilight.html', 'transports/aa-9.html', 'transports/crucero-alderaan.html', 'transports/gr-75.html', 'transports/imperial-shuttle.html', 'transports/v-wing.html']
+
+
+"""
+[
+E            './index.html',
+E            './catalogo.html',
+E            './contacto.html',
+E            'alta.html',
+E            'media.html',
+E            'baja.html',
+E         -  'transports/y-wing.html',
+E         -  'transports/t70-xwing.html',
+E         -  'transports/magna-guard.html',
+E         -  'transports/neimoidian-escort.html',
+E         -  'transports/cañonera-republica.html',
+E         -  'transports/twilight.html',
+E         -  'transports/aa-9.html',
+E         -  'transports/crucero-alderaan.html',
+E         -  'transports/gr-75.html',
+E         -  'transports/imperial-shuttle.html',
+E         -  'transports/v-wing.html',
+E           ]
+
+"""

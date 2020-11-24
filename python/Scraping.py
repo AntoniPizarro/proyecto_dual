@@ -66,9 +66,12 @@ def getLinks(url):
 
 
 def union(p, q):
+    if type(p) != list or type(q) != list:
+        return False
     for e in q:
         if e not in p:
             p.append(e)
+    return p
 
 
 def webCrawler(seed):
@@ -84,6 +87,8 @@ def webCrawler(seed):
 
 
 if __name__ == "__main__":
-    assert webCrawler("https://proyectodual.000webhostapp.com/") == ['https://proyectodual.000webhostapp.com/', './contacto.html', './catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html',
-                                                                     'transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html']
+
+    assert union(["a", "b", "d", "g", "h"], ["a", "b", "c", "d", "e", "f", "g", "h", "i"]) == [
+        "a", "b", "d", "g", "h", "c", "e", "f", "i"]
+    #assert webCrawler("https://proyectodual.000webhostapp.com/") == ['https://proyectodual.000webhostapp.com/', './contacto.html', './catalogo.html', 'transports/v-wing.html', '../contacto.html', '../catalogo.html', '../index.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html','transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html', 'baja.html', 'media.html', 'alta.html', './index.html']
     #assert webCrawler("https://paulk123.000webhostapp.com/") == ['https://paulk123.000webhostapp.com/', 'audios.html', 'videos.html', 'movie_rank.html', 'Free_Lily.html']

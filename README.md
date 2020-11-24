@@ -7,7 +7,7 @@
 ## Tabla de contenidos
 
 1. [Motivación](#motivación)
-1. [Tecnologías usadas](#tecnologias-usadas)
+1. [Tecnologías usadas](#tecnologías-usadas)
 1. [Features](#features)
 1. [Código de Ejemplo](#codigo-de-ejemplo)
 1. [Tests](#tests)
@@ -33,6 +33,8 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 - Markdown
 
 **[⬆ back to top](#table-of-contents)**
+
+---
 
 ## Features
 

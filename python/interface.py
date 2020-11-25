@@ -3,8 +3,7 @@
 #https://docs.python.org/3/library/tk.html
 
 import tkinter
-from Scraping import obtenerDatos
-from Scraping import obtenerCodigo
+from Scraping import obtenerDatos, obtenerCodigo
 from PythonToMongo import insertarUno
 
 ventana = tkinter.Tk() #Crear ventana

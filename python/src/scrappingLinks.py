@@ -44,7 +44,6 @@ def obtenerDatos(codigo):
         codigo = codigo[codigo.find("</p>") + 4:]
     nave = {'modelo': modelo, 'marca': marca, 'gama': gama, 'tasa': tasa,
             'color': color, 'plazas': plazas, 'caracteristicas': caracteristicas}
-    print(nave)
     return nave
 
 

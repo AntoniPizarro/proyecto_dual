@@ -5,13 +5,13 @@ import requests
 # insertarUno(obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")))
 
 
-def obtenerCodigo(webCrawler):
-    if len(webCrawler) < 1 or type(webCrawler) != str:
+def obtenerCodigo(url):
+    if len(url) < 1 or type(url) != str:
         return False
     cabecera = "https://proyectodual.000webhostapp.com/"
-    if webCrawler.find('https') == -1:
-        webCrawler = cabecera + webCrawler
-    r = requests.get(webCrawler)
+    if url.find('https') == -1:
+        url = cabecera + url
+    r = requests.get(url)
     codigoWeb = r.text
     return codigoWeb
 
@@ -33,6 +33,10 @@ def obtenerDatos(codigo):
     caracteristicas = []
     # Creamos un loop que guarda las caracteristicas de la nave en una lista
     while codigo.count("<p>") != 0:
+        caracteristicas.append(codigo[ codigo.find("<p>") + 3 : codigo.find("</p>") ])
+        codigo = codigo[ codigo.find("</p>") + 4: ]
+        #Creamos un diccionario con los campos y lo devolvemos
+    nave = {'modelo':modelo,'marca':marca,'gama':gama,'tasa':tasa,'color':color,'plazas':plazas,'caracteristicas':caracteristicas}
         caracteristicas.append(
             codigo[codigo.find("<p>") + 3: codigo.find("</p>")])
         codigo = codigo[codigo.find("</p>") + 4:]

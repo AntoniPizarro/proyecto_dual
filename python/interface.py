@@ -1,9 +1,9 @@
 #21/11/2020 - 0:55 / 1:50
+#22/11/2020 - 18:20 / 2:21
 #https://docs.python.org/3/library/tk.html
 
 import tkinter
-from Scraping import obtenerDatos
-from Scraping import obtenerCodigo
+from Scraping import obtenerDatos, obtenerCodigo
 from PythonToMongo import insertarUno
 
 ventana = tkinter.Tk() #Crear ventana
@@ -22,7 +22,7 @@ def saludo(nombre, num):
 def printear(text):
     print(text)
 
-boton = tkinter.Button(ventana, text = "Pulsa para follar", padx = 30, pady = 10, command = lambda: saludo("Idiota", 12)) #Crear un boton en la ventana con el texto personalizado con dimensiones de 30 de largo y 10 de alto que ejecuta la funcion "saludo" con unos parametros
+boton = tkinter.Button(ventana, text = "Pulsa para hacer algo", padx = 30, pady = 10, command = lambda: saludo("Idiota", 12)) #Crear un boton en la ventana con el texto personalizado con dimensiones de 30 de largo y 10 de alto que ejecuta la funcion "saludo" con unos parametros
 boton.pack() #Mostrar boton
 
 cajaTexto = tkinter.Entry(ventana, font = "Helvetica 20") #Crear un campo de entrada en ventana con una fuente 'Helvetica' de tamaño 20
@@ -35,14 +35,14 @@ def insertarDato(link):
     cajaTexto.delete(0, tkinter.END)
 
 etiqueta1 = tkinter.Label(ventana, text = "url")
-#etiqueta1.pack()
+etiqueta1.pack()
 cajaTexto = tkinter.Entry(ventana)
-#cajaTexto.pack()
+cajaTexto.pack()
 etiqueta2 = tkinter.Label(ventana, text = "")
-#etiqueta2.pack()
+etiqueta2.pack()
 insercion = tkinter.Button(ventana, text = "Insertar en la BD", command = lambda: insertarDato(cajaTexto.get()))
-#insercion.pack(side = tkinter.BOTTOM)
-
+insercion.pack(side = tkinter.BOTTOM)
+"""
 campoModelo = tkinter.Entry(ventana)
 campoMarca = tkinter.Entry(ventana)
 campoTasa = tkinter.Entry(ventana)
@@ -79,5 +79,6 @@ labelPlazas.grid(row = campos[0] + 2, column = campos[1] + 4, pady = 2)
 campoPlazas.grid(row = campos[0] + 3, column = campos[1] + 4, pady = 2)
 labelCaracteristicas.grid(row = campos[0] + 4, column = campos[1] + 0, pady = 2)
 campoCaracteristicas.grid(row = campos[0] + 5, column = campos[1] + 0, pady = 2)
+"""
 
 ventana.mainloop() #Mantener ventana abierta

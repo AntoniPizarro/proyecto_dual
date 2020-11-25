@@ -1,4 +1,9 @@
-python/src/__pycache__/__init__.cpython-39.pyc
-python/src/__pycache__/scrappingLinks.cpython-39.pyc
-python/test/__pycache__/__init__.cpython-39.pyc
 python/test/__pycache__/scrappingLinks.cpython-39-pytest-6.1.2.pyc
+python/test/__pycache__/__init__.cpython-39.pyc
+python/src/__pycache__/scrappingLinks.cpython-39.pyc
+python/src/__pycache__/__init__.cpython-39.pyc
+python/__pycache__/PythonToMongo.cpython-39.pyc
+python/__pycache__/Scraping.cpython-39.pyc
+python/__pycache__/PythonToMongo.cpython-39.pyc
+python/__pycache__/Scraping.cpython-39.pyc
+python/src/__pycache__/scrappingLinks.cpython-39.pyc

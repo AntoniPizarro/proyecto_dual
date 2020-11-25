@@ -37,6 +37,8 @@ def crearPagina(nombre, marca, archivo, gama, color, img_dir, img_alt, capacidad
         file.write("            <p>Gama: " + gama + " (Tasa: 25§)</p>" + os.linesep)
     elif gama == "Baja":
         file.write("            <p>Gama: " + gama + " (Tasa: 15§)</p>" + os.linesep)
+    else:
+        pass
     file.write("            <p>Color: " + color +"</p>" + os.linesep)
     file.write("            <img class=\"img\" alt=\"" + img_alt + "\" src=\"" + img_dir + "\">" + os.linesep)
     file.write("            <h2>Numero de plazas: <b>" + str(capacidad) + "</b></p>" + os.linesep)

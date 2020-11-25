@@ -1,19 +1,20 @@
 # Obtener codigo html
 
 import requests
+from PythonToMongo import insertarUno
 
 # insertarUno(obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")))
 
 
-def obtenerCodigo(webCrawler):
-    if len(webCrawler) < 1 or type(webCrawler) != str:
+def obtenerCodigo(url):
+    if len(url) < 1 or type(url) != str:
         return False
     cabecera = "https://proyectodual.000webhostapp.com/"
-    if webCrawler.find('https') == -1:
-        webCrawler = cabecera + webCrawler
-    r = requests.get(webCrawler)
-    codigoWeb = r.text
-    return codigoWeb
+    if url.find('https') == -1:
+        url = cabecera + url
+    r = requests.get(url)
+    url = r.text
+    return url
 
 
 def obtenerDatos(codigo):
@@ -89,10 +90,9 @@ def webCrawler(seed):
             crawled.append(page)
     for link in crawled:
         if link not in banedLinks:
-            obtenerDatos(obtenerCodigo(link))
+            insertarUno(obtenerDatos(obtenerCodigo(link)))
         else:
             pass
-    print(crawled)
     return crawled
 
 

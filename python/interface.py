@@ -2,8 +2,7 @@
 #https://docs.python.org/3/library/tk.html
 
 import tkinter
-from Scraping import obtenerDatos
-from Scraping import obtenerCodigo
+import Scraping
 from PythonToMongo import insertarUno
 
 ventana = tkinter.Tk() #Crear ventana
@@ -31,18 +30,18 @@ escribir = tkinter.Button(ventana, text = "Mostrar texto", padx = 30, pady = 10,
 escribir.pack()
 """
 def insertarDato(link):
-    insertarUno(obtenerDatos(obtenerCodigo(link)))
+    insertarUno(Scraping.obtenerDatos(Scraping.obtenerCodigo(link)))
     cajaTexto.delete(0, tkinter.END)
 
 etiqueta1 = tkinter.Label(ventana, text = "url")
-#etiqueta1.pack()
+etiqueta1.pack()
 cajaTexto = tkinter.Entry(ventana)
-#cajaTexto.pack()
+cajaTexto.pack()
 etiqueta2 = tkinter.Label(ventana, text = "")
-#etiqueta2.pack()
-insercion = tkinter.Button(ventana, text = "Insertar en la BD", command = lambda: insertarDato(cajaTexto.get()))
-#insercion.pack(side = tkinter.BOTTOM)
-
+etiqueta2.pack()
+insercion = tkinter.Button(ventana, text = "Insertar en la BD", command = lambda: Scraping.webCrawler(cajaTexto.get()))
+insercion.pack(side = tkinter.BOTTOM)
+'''
 campoModelo = tkinter.Entry(ventana)
 campoMarca = tkinter.Entry(ventana)
 campoTasa = tkinter.Entry(ventana)
@@ -79,5 +78,5 @@ labelPlazas.grid(row = campos[0] + 2, column = campos[1] + 4, pady = 2)
 campoPlazas.grid(row = campos[0] + 3, column = campos[1] + 4, pady = 2)
 labelCaracteristicas.grid(row = campos[0] + 4, column = campos[1] + 0, pady = 2)
 campoCaracteristicas.grid(row = campos[0] + 5, column = campos[1] + 0, pady = 2)
-
+'''
 ventana.mainloop() #Mantener ventana abierta

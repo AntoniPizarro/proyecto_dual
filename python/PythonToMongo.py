@@ -17,7 +17,6 @@ def insertarUno(nave):
         print("Servicio actualizado:")
         db.datos_naves.update_one(compr,{"$set":doc})
         pprint(doc)
-=======
 
 cliente = MongoClient('mongodb+srv://m001-student:m001-mongodb-basics@sandbox.4uubd.mongodb.net/accion?retryWrites=true&w=majority')
 db = cliente['high_schools']

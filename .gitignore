@@ -1,3 +1,17 @@
+# VS Code
+.vscode
+
+#Packages
+.pytest_cache
+domain/__pycache__
+domain/pytest_cache
+src/__pycache__
+test/__pycache__
+
+
+
+
+# Archivos Generados desde Pytest
 python/src/__pycache__/__init__.cpython-39.pyc
 python/src/__pycache__/scrappingLinks.cpython-39.pyc
 python/test/__pycache__/__init__.cpython-39.pyc

@@ -2,13 +2,13 @@ import requests
 
 
 def obtenerCodigo(webCrawler):
+    cabecera = "https://proyectodual.000webhostapp.com/"
     inexistent = requests.get(
         "https://proyectodual.000webhostapp.com/1981781ji98p7654yrtgfhjkliop897i6u54yerdgtfhjkuio98")
     if type(webCrawler) != str or len(webCrawler) < 1:
         return False
     else:
         pass
-    cabecera = "https://proyectodual.000webhostapp.com/"
     if webCrawler.find('https') == -1:
         webCrawler = cabecera + webCrawler
     else:
@@ -22,6 +22,32 @@ def obtenerCodigo(webCrawler):
     return codigoWeb
 
 
+def obtenerDatos(codigo):
+    # Obtenemos los campos de la nave
+    modelo = codigo[codigo.find("<h3>") + 4: codigo.find(" - ")]
+    marca = codigo[codigo.find(" - ") + 3: codigo.find("</h3>")]
+    gama = codigo[codigo.find("<p>Gama:") + 9: codigo.find(" (Tasa")]
+    tasa = int(codigo[codigo.find("(Tasa:") + 7: codigo.find("§")])
+    # Arreglamos el codigo para buscar color
+    codigo = codigo[codigo.find("<p>Color:"):]
+    color = codigo[codigo.find(
+        "<p>Color:") + 10: codigo[codigo.find("<p>Color:"):].find("</p>")]
+    plazas = int(
+        codigo[codigo.find("<h2>Numero de plazas: <b>") + 25: codigo.find("</b>")])
+    # Arreglamos el codigo para buscar las caracteristicas
+    codigo = codigo[codigo.find("<div class=\"caracteristicas\">") + 29:]
+    caracteristicas = []
+    # Creamos un loop que guarda las caracteristicas de la nave en una lista
+    while codigo.count("<p>") != 0:
+        caracteristicas.append(
+            codigo[codigo.find("<p>") + 3: codigo.find("</p>")])
+        codigo = codigo[codigo.find("</p>") + 4:]
+    nave = {'modelo': modelo, 'marca': marca, 'gama': gama, 'tasa': tasa,
+            'color': color, 'plazas': plazas, 'caracteristicas': caracteristicas}
+    print(nave)
+    return nave
+
+
 def getLinks(url):
     codigo = url
     if url == -1:
@@ -29,6 +55,8 @@ def getLinks(url):
     else:
         pass
     listaLinks = []
+    listaProhibidos = ["./index.html", "../index.html",
+                       "./contacto.html", "../contacto.html", "baja.html", "media.html", "alta.html"]
     while True:
         inicio_href = codigo.find("href=")
         inicio_url = codigo.find('"', inicio_href)
@@ -40,6 +68,8 @@ def getLinks(url):
         else:
             link = codigo[inicio_url + 1: fin_url]
             if link.find("html") == -1:
+                codigo = codigo[fin_url:]
+            elif link in listaProhibidos:
                 codigo = codigo[fin_url:]
             else:
                 listaLinks.append(codigo[inicio_url + 1: fin_url])
@@ -59,6 +89,8 @@ def union(p, q):
 
 
 def webCrawler(seed):
+    banedLinks = [seed, "https://proyectodual.000webhostapp.com/",
+                  "./catalogo.html", "../catalogo.html"]
     toCrawl = [seed]
     crawled = []
     while toCrawl:
@@ -66,6 +98,9 @@ def webCrawler(seed):
         if page not in crawled:
             union(toCrawl, getLinks(obtenerCodigo(page)))
             crawled.append(page)
+    for link in crawled:
+        if link not in banedLinks:
+            obtenerDatos(obtenerCodigo(link))
         else:
             pass
     return crawled

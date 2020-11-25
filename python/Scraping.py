@@ -38,7 +38,6 @@ def obtenerDatos(codigo):
         codigo = codigo[codigo.find("</p>") + 4:]
     nave = {'modelo': modelo, 'marca': marca, 'gama': gama, 'tasa': tasa,
             'color': color, 'plazas': plazas, 'caracteristicas': caracteristicas}
-    print(nave)
     return nave
 
 
@@ -79,7 +78,7 @@ def union(p, q):
 
 
 def webCrawler(seed):
-    banedLinks = ["https://proyectodual.000webhostapp.com/",
+    banedLinks = [seed,
                   "./catalogo.html", "../catalogo.html"]
     toCrawl = [seed]
     crawled = []
@@ -93,12 +92,14 @@ def webCrawler(seed):
             obtenerDatos(obtenerCodigo(link))
         else:
             pass
+    print(crawled)
     return crawled
 
 
 if __name__ == "__main__":
 
-    assert webCrawler("https://proyectodual.000webhostapp.com/") == []
+    assert webCrawler("https://proyectodual.000webhostapp.com/index.html") == ['./catalogo.html', 'transports/v-wing.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html', 'transports/crucero-alderaan.html',
+                                                                               'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html']
 
     #assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/catalogo.html")) == ['./catalogo.html', 'transports/y-wing.html', 'transports/t70-xwing.html', 'transports/magna-guard.html', 'transports/neimoidian-escort.html', 'transports/cañonera-republica.html', 'transports/twilight.html', 'transports/aa-9.html', 'transports/crucero-alderaan.html', 'transports/gr-75.html', 'transports/imperial-shuttle.html', 'transports/v-wing.html']
 

@@ -6,7 +6,7 @@ import Scraping
 from PythonToMongo import insertarUno
 
 ventana = tkinter.Tk() #Crear ventana
-ventana.geometry("500x300") #Establecer dimensiones
+ventana.geometry("200x110") #Establecer dimensiones
 """
 etiqueta = tkinter.Label(ventana, text = "Me cago en toh", bg = "green") #Crear etiqueta o texto para mostrar en ventana
 etiqueta.pack() #Mostrar etiqueta

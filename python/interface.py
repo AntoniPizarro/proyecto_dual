@@ -7,7 +7,7 @@ import Scraping
 from PythonToMongo import insertarUno
 
 ventana = Tk() #Crear ventana
-ventana.geometry("400x310") #Establecer dimensiones
+ventana.geometry("400x600") #Establecer dimensiones
 barraMenu = Menu(ventana)
 ventana.config(menu=barraMenu)
 
@@ -68,6 +68,22 @@ def introducirDatos(activacion):
 
         blanco7.grid(padx=5, pady=5, row=4, column=2)
         introducirDatosBoton.grid(padx=10, pady=5, row=4, column=3)
+
+        caracteristica1.grid(sticky="W",padx=10, pady=5, row=2, column=4)
+        caracteristica2.grid(sticky="W",padx=10, pady=5, row=3, column=4)
+        caracteristica3.grid(sticky="W",padx=10, pady=5, row=4, column=4)
+        caracteristica4.grid(sticky="W",padx=10, pady=5, row=5, column=4)
+        caracteristica5.grid(sticky="W",padx=10, pady=5, row=6, column=4)
+        caracteristica6.grid(sticky="W",padx=10, pady=5, row=7, column=4)
+        caracteristica7.grid(sticky="W",padx=10, pady=5, row=8, column=4)
+        caracteristica8.grid(sticky="W",padx=10, pady=5, row=9, column=4)
+        caracteristica9.grid(sticky="W",padx=10, pady=5, row=10, column=4)
+        caracteristica10.grid(sticky="W",padx=10, pady=5, row=11, column=4)
+        caracteristica11.grid(sticky="W",padx=10, pady=5, row=12, column=4)
+        caracteristica12.grid(sticky="W",padx=10, pady=5, row=13, column=4)
+        caracteristica13.grid(sticky="W",padx=10, pady=5, row=14, column=4)
+        caracteristica14.grid(sticky="W",padx=10, pady=5, row=15, column=4)
+        caracteristica15.grid(sticky="W",padx=10, pady=5, row=16, column=4)
     else:
         modeloLabel.grid_forget()
         modeloInput.grid_forget()
@@ -94,6 +110,22 @@ def introducirDatos(activacion):
         blanco6.grid_forget()
         introducirDatosBoton.grid_forget()
 
+        caracteristica1.grid_forget()
+        caracteristica2.grid_forget()
+        caracteristica3.grid_forget()
+        caracteristica4.grid_forget()
+        caracteristica5.grid_forget()
+        caracteristica6.grid_forget()
+        caracteristica7.grid_forget()
+        caracteristica8.grid_forget()
+        caracteristica9.grid_forget()
+        caracteristica10.grid_forget()
+        caracteristica11.grid_forget()
+        caracteristica12.grid_forget()
+        caracteristica13.grid_forget()
+        caracteristica14.grid_forget()
+        caracteristica15.grid_forget()
+
 def todosDatos(activacion):
     
     if activacion == True:
@@ -119,6 +151,7 @@ etiqueta1 = Label(ventana, text = "url")
 cajaTexto = Entry(ventana)
 etiqueta2 = Label(ventana, text = "")
 insercion = Button(ventana, text = "Insertar en la BD", command = lambda: obtenerTodosDatos(cajaTexto.get()))
+
 blanco6 = Label(ventana, text = "")
 plazasInput = Entry(ventana, width=10)
 plazasLabel = Label(ventana, text = "Plazas:")
@@ -140,21 +173,26 @@ modeloLabel = Label(ventana, text = "Modelo:")
 blanco7 = Label(ventana, text = "")
 introducirDatosBoton = Button(ventana, text = "Introducir", command = lambda: nada())
 
-caracteristica1 = Checkbutton(ventana, text="Turbo laser")
-caracteristica2 = Checkbutton(ventana, text="Cañones de iones")
-caracteristica3 = Checkbutton(ventana, text="Artilleria")
-caracteristica4 = Checkbutton(ventana, text="Torpedos")
-caracteristica5 = Checkbutton(ventana, text="Misileros")
-caracteristica6 = Checkbutton(ventana, text="Escudos")
-caracteristica7 = Checkbutton(ventana, text="Hipervelocidad")
-caracteristica8 = Checkbutton(ventana, text="Camuflaje")
-caracteristica9 = Checkbutton(ventana, text="Patas extensibles")
-caracteristica10 = Checkbutton(ventana, text="Puente de mando")
-caracteristica11 = Checkbutton(ventana, text="Cabina")
-caracteristica12 = Checkbutton(ventana, text="Camara de carga")
-caracteristica13 = Checkbutton(ventana, text="Hangar")
-caracteristica14 = Checkbutton(ventana, text="Puerto")
-caracteristica15 = Checkbutton(ventana, text="Velas solares")
+listaCaracteristicas = []
+for i in range(15):
+    option = IntVar()
+    option.set(0)
+    listaCaracteristicas.append(option)
+caracteristica1 = Checkbutton(ventana, text="Turbo laser", variable = listaCaracteristicas[0])
+caracteristica2 = Checkbutton(ventana, text="Cañones de iones", variable = listaCaracteristicas[1])
+caracteristica3 = Checkbutton(ventana, text="Artilleria", variable = listaCaracteristicas[2])
+caracteristica4 = Checkbutton(ventana, text="Torpedos", variable = listaCaracteristicas[3])
+caracteristica5 = Checkbutton(ventana, text="Misileros", variable = listaCaracteristicas[4])
+caracteristica6 = Checkbutton(ventana, text="Escudos", variable = listaCaracteristicas[5])
+caracteristica7 = Checkbutton(ventana, text="Hipervelocidad", variable = listaCaracteristicas[6])
+caracteristica8 = Checkbutton(ventana, text="Camuflaje", variable = listaCaracteristicas[7])
+caracteristica9 = Checkbutton(ventana, text="Patas extensibles", variable = listaCaracteristicas[8])
+caracteristica10 = Checkbutton(ventana, text="Puente de mando", variable = listaCaracteristicas[9])
+caracteristica11 = Checkbutton(ventana, text="Cabina", variable = listaCaracteristicas[10])
+caracteristica12 = Checkbutton(ventana, text="Camara de carga", variable = listaCaracteristicas[11])
+caracteristica13 = Checkbutton(ventana, text="Hangar", variable = listaCaracteristicas[12])
+caracteristica14 = Checkbutton(ventana, text="Puerto", variable = listaCaracteristicas[13])
+caracteristica15 = Checkbutton(ventana, text="Velas solares", variable = listaCaracteristicas[14])
 
 #C1 = Checkbutton(top, text = "Music", variable = CheckVar1, onvalue = 1, offvalue = 0, height=5, width = 20)
 

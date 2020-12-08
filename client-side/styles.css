@@ -173,8 +173,54 @@ a:active {
 }
 
 
+/*Estilos documentación*/
 
+.titleDoc {
+    text-align: center;
+}
 
+.subTitle {
+    text-align: center;
+    color: black;
+}
 
+.doc a:link {
+    color: black;
+    text-decoration: none;
+}
 
+.doc a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.doc a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.doc a:active {
+    color: black;
+    text-decoration: underline;
+}
+
+.titleDoc a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.titleDoc a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.titleDoc a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.titleDoc a:active {
+    color: black;
+    text-decoration: underline;
+}
     

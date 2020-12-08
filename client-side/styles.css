@@ -184,6 +184,16 @@ a:active {
     color: black;
 }
 
+.bodyDoc {
+    background-color: rgb(252, 252, 161);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: context-menu;
+}
+
+.doc li {
+    color: black;
+}
+
 .doc a:link {
     color: black;
     text-decoration: none;

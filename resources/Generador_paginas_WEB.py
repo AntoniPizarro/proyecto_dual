@@ -6,7 +6,7 @@ import os
 
 
 def crearPagina(nombre, marca, archivo, gama, color, img_dir, img_alt, capacidad, caracteristicas):
-    direccion = r"C:\Users\Granpepinillo\Documents\Toni\DAW_DUAL\Proyecto\proyecto_dual\client-side\transports\\"
+    direccion = r".\client-side\transports\\"
     file = open(direccion + archivo + ".html", "w", encoding="utf-8")
     file.write("<!DOCTYPE html>" + os.linesep)
     file.write("<html lang=\"en\">" + os.linesep)

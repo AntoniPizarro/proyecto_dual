@@ -2,7 +2,7 @@
 
 #Importación librerías
 from tkinter import *
-import domain.src.scrappingLinks
+import domain.src.scrappingLinks as scrap
 from repository.PythonToMongo import insertarUno
 from resources.Generador_paginas_WEB import crearPagina
 import webbrowser
@@ -175,7 +175,7 @@ def todosDatos(activacion):
         insercion.grid_forget()
 
 def obtenerTodosDatos(link):
-    scrappingLinks.webCrawler(link)
+    scrap.webCrawler(link)
     cajaTexto.delete(0, END)
 
 def newProduct():

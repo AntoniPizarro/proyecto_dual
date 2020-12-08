@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Explicación de Funciones</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Union</a></h3>
+
+        <ul class="contribuidores">
+            <li><a href="../5explicaciónFunciones.html">Explicación Funciones</a></li>
+        </ul>
+
+        <img class="imgDoc" src="../imgs/union.JPG">
+
+        <p>La función de union es muy sencilla pero muy útil. Union básicamente nos ayuda a evitar que añadamos links que ya están para crawlear en la lista de pendientes para crawlear. Una vez expliquemos su funcionamiento comprobareis su utilidad y su facilidad de comprensión al modo en que se ejecuta.<br><br>
+        Union recoge dos parámetros, “p” y “q”, ambos son listas, “q” representa la lista de links obtenidos en la función de getAllLinks y el parámetro “p” hace referencia a la lista de links para Crawlear(toCrawl) en la función del webCrawler.<br><br>
+        Al principio creamos un condicional donde nos aseguramos que si “p” o “q” son listas sobre las que podamos trabajar.<br><br>
+        Acto seguido creamos un bucle para que mire uno a uno los links obtenidos en listaLinks en la función anterior, en este caso “e” hace referencia a cada link individualmente que podamos encontrar en el interior de la lista listaLinks.<br><br>
+        A continuación creamos un condicional que mire si el link con el que estamos trabajando está en la lista de toCrawl de la función webCrawler, en el caso de que no estén los links nos los irá añadiendo.<br><br>
+        En caso contrario, en el caso de que el link ya se encuentre en el interior de la listLinks simplemente pasaremos a comprobar el siguiente y así sucesivamente hasta que hayamos comprobado unitariamente todos los links obtenidos en la función getAllLinks y almacenados en listLinks.<br><br>
+        Como resultado de está función obtendremos la lista “p”, que hace referencia a la lista toCrawl del crawler Web.
+        </p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

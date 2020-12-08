@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Explicación de Funciones</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Get Links</a></h3>
+
+        <ul class="contribuidores">
+            <li><a href="../5explicaciónFunciones.html">Explicación Funciones</a></li>
+        </ul>
+
+        <img class="imgDoc" src="../imgs/getLinks.JPG">
+
+        <p>La funcionalidad de la función getLinks es obtener todos los links que pueda contener una página web, sobre los cuales después nosotros trabajaremos.<br><br>
+        Definimos una variable con el nombre de “código” donde almacenaremos la “url” que en este caso contendrá todo el código en formato string y legible que hemos obtenido de la función obtenerCodigo.<br><br>
+        Creamos una lista llamada “listaLinks” donde iremos almacenando todos los links que vallamos recogiendo sobre el código con el que trabajamos.<br><br>
+        Creamos una lista llamada “linksProhibidos” donde incluimos los links con los que no nos interesa trabajar ya que sabemos que en esos links no se encunetra la información que consideramos importante o la cual queremos obtener con nuestro programa de Scrapping.
+        Creamos un bucle el cual seguirá trabajando todo el tiempo mientras en ningún momento los resultados sean -1, en ese caso indicará que no hay más links que recoger en la página web y no se ejecutará el bucle ya que el resultado será igual a “False”.
+        Definimos la posición del inició de la referencia del link, y le asignamos el nombre de la variable “inicio_href”.<br><br>
+        Definimos la posición del comienzo del link, y le asignamos el nombre de la variable “inicio_url”.<br><br>
+        Definimos la posición del final del link, y le asignamos el nombre de la variable “fin_url”.<br><br>
+        Creamos dos condicionales en el cual nos aseguramos de que la longitud del código no sea igual a 0, ya que en ese caso no habría código sobre el que buscar links o que la posición del link no sea igual a -1, ya que en ese caso no habría encontrado la posición de ningún link en la página web.<br><br>
+        En caso contrario significará que la página contiene links sobre los que podemos trabajar.<br><br>
+        Creamos una variable con el nombre link con la cual ejecutamos un slice sobre nuestro código para que el valor de la variable sea exactamente un link obtenido de la página web.<br><br>
+        En el caso de que el link que hemos encontrado no obtenga “html” ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
+        En caso e que el link se encuentre en la lista de links prohibidos, ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
+        En caso contrario añadimos el link a la lista de links y ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
+        Al finalizar con el bucle, nos devolverá una lista de links que incluirá todos los links sobre los cuales queremos trabajar y podemos obtener información de utilidad.</p>
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

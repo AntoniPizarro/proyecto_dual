@@ -16,6 +16,7 @@
 1. [Instalación](#instalación)
 1. [Contribución](#contribución)
 1. [Colaboradores](#colaboradores)
+1. [Documentación](#documentación)
 1. [Licencia](#licencia)
 <!---Estado de construcción-->
 
@@ -151,6 +152,14 @@ Es la mezcla de las funcionalidades de las dos pestañas anteriores.
 ## Colaboradores
 
 - [Ver Colaboradores](https://github.com/AntoniPizarro/proyecto_dual/pulse)
+
+**[⬆ back to top](#tabla-de-contenidos)**
+
+---
+
+## Documentación
+
+>
 
 **[⬆ back to top](#tabla-de-contenidos)**
 

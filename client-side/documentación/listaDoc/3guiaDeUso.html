@@ -16,6 +16,63 @@
 
         <h1 class="titleDoc"><a href="../documentación.html">Documentación</a></h1>
 
+        <h3 class="subTitle">Guía de Uso para el Usuario</h3>
+
+        <p class="pDoc">A continuación explicaremos los conceptos necesarios para poder usar la interfaz gráfica (GUI), la cual nos permitirá ejecutar todas las funcionalidades de nuestro programa.</p>
+
+        <ol class="explain">
+            <li>Primero de todo accedemos al directorio “resources”, en el cual encontraremos el archivo “interface.py” y procedemos a ejecutarlo, haciendo doble clic sobre él o pulsando botón izquierdo y seleccionando la opción “abrir”</li>
+            <li>A continuación podremos observar que se nos habre la consola, aunque mantendrá la pantalla en negro y al mismo tiempo se nos abrirá otra pestaña conteniendo la GUI de nuestra aplicación</li>
+            <li>En el borde superior de la GUI podemos identificar tres pestañas diferentes:</li>
+            <ul>
+                <li>Scrap</li>
+                <li>Generar Productos</li>
+                <li>Ayuda</li>
+            </ul>
+        </ol>
+
+        <h4 class="h4title">Scrap</h4>
+
+        <p class="pDoc">Al seleccionar la pestaña Scrap observamos que la apariencia de nuestra GUI cambia. Aparece una casilla en blanco con una etiqueta que pone “url” y también podemos localizar un botón con el nombre “Insertar en la BD”.<br><br>
+            En la casilla en blanco introduciremos cualquier url de una página web de nuestro sitio web.
+            Después de haber introducido la url y de pulsar el botón, el programa recogerá toda la información de los servicios y los subirá a la base de datos.<br><br>
+            Llegados a este punto, probablemente el título de la ventana de la GUI nos informe de que el programa no responde, pero es totalmente normal ya que está trabajando en segundo plano.
+            Durante el proceso, en la consola o terminal va apareciendo la información de los servicios en estructura json, y que a su vez nos indica si se guarda en la base de datos o se ha actualizado un documento ya existente.</p>
+            
+            <h4 class="h4title">Generar Productos</h4>
+
+            <p class="pDoc">Al hacer clic sobre esta pestaña podemos ver que aparece un menú desplegable con tres opciones a elegir, las tres opciones que nos muestra son:</p>
+
+            <ul class="explain">
+                <li>Generar en sitio WEB</li>
+                <li>Generar en MongoAtlas</li>
+                <li>Generar en sitio WEB y MongoAtlas</li>
+            </ul><br><br>
+            
+            <p class="pDoc">Las tres opciones nos mostrarán la misma distribución en pantalla pero debemos saber de antemano que no ejecutan los mismo procesos.<br><br>            
+            Cualquiera de las tres opciones nos creará un archivo que contendrá un servicio, el cual pensamos incluir en nuestra página web, base de datos o ambas, conteniendo las especificaciones que nosotros le hayamos asignado a ese servicio en particular. Disponemos de distintos campos, algunos de ellos requerirán que se rellenen manualmente, seleccionando sobre ellos o escribiendo el contenido que creamos adecuado para el servicio. Tendremos un apartado donde se mostrarán distintas casillas para elegir las características que tiene el servicio que pensamos incluir. A continuación explicaremos el estandarte convencional para rellenar los campos de forma adecuada para la comprensión del cliente y para su correcta visualización:
+            Modelo: nombre del vehículo de nuestro servicio.<br><br>
+            Tasa: precio del servicio.<br><br>
+            Marca: filiación del nuevo servicio.<br><br>
+            Color: color del cual está compuesto en su mayoría.<br><br>
+            Gama:  grado de calidad.<br><br>
+            Plazas: capacidad de pasajeros del vehículo.<br><br>
+            Texto alternativo imagen: texto con más conveniencia para visualizarse en caso de que el navegador no pueda cargar la imagen.<br><br>
+            url imagen: dirección de la imagen.<br><br>
+            Características: hay 15 casillas que se pueden seleccionar. Se pueden seleccionar hasta 6.</p>
+
+            <h6 class="h6title">Generar en sitio Web</h6>
+
+            <p class="pDoc">Nos da la opción de crear archivos HTML que contendrán las especificaciones que nosotros le hayamos querido dar a nuestro nuevo servicio. Este archivo se generará en el directorio en el que se encuentran el resto de servicios.</p>
+            
+            <h6 class="h6title">Generar en mongoAtlas</h6>
+
+            <p class="pDoc">Nos da la opción de crear archivos JSON que contendrán las especificaciones que nosotros le hayamos querido dar a nuestro nuevo servicio. El documento JSON se generará sobre nuestra base de datos en la colección donde tenemos todos los productos de los que hemos recogido la información o tenemos intención de recoger información de la página web.</p>
+
+            <h6 class="h6title">Generar en sitio web y mongo Atlas</h6>
+
+            <p class="pDoc">Es la mezcla de las funcionalidades de las dos pestañas anteriores.</p>
+            
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
         </footer>

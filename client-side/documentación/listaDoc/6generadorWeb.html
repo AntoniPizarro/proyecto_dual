@@ -16,6 +16,22 @@
 
         <h1 class="titleDoc"><a href="../documentación.html">Documentación</a></h1>
 
+        <h3 class="subTitle">Generador de Páginas Web</h3>
+
+        <p class="pDoc">Este archivo fue creado para poder generar páginas web a gran velocidad. Su intención es poder agilizar el trabajo y aumentar el rendimiento al igual que la productividad dentro del equipo de trabajo.<br>
+        Básicamente su función es crear páginas web para poder añadir servicios a la página web de la empresa, ajustándose a los parámetros que ofrecen los distintos servicios ya ofertados y visualizados por los consumidores en la página web de la compañía.<br><br>
+        
+        Como podemos ver al inicio para ejecutar este generador de páginas web, requerimos el uso de la librería “os” proporcionada por python. Esta librería nos permite acceder a las funcionalidades del sistema operativo, permitiéndonos manipular la estructura de directorios para por ejemplo leer y escribir archivos, en este caso utilizaremos la funcionalidad que nos permite escribir archivos proporcionada por esta librería.<br>        
+        Creamos una función llamada “crearPagina”, en la cual le pasamos todas las variables necesarias para poder generar los campos que necesitamos para los servicios de nuestra página web
+        Declaramos la variable llamada “direccion” su funcionalidad es guardar los documentos que generemos con el generados en un directorio específico.<br>
+        La variable “file” en su interior indica que el archivo será generado en la dirección especificada anteriormente, que el archivo va tener una extensión “.html”, el documento será abierto en modo “w”(write) y utilizaremos un encoding “utf-8”, gracias a esto los caracteres que se visualizarán en pantalla tendrá un formato no codificado y es lo que producirá que nuestros archivos puedan ser leídos e interpretados.<br>
+        Las variables “file.write” crearan las líneas de código que conforman nuestros documentos HTML y al acabar cada línea de código gracias al “os.linesep” el programa ejecutará un salto de línea
+        Hemos creado tres condicionales, ya que el precio de nuestros servicios depende de la gama a la cual pertenezcan. El programa al identificar gracias a los condicionales la gama que le hemos asignado al producto para el cual estamos generando la página le asignara el precio correspondiente a la gama a la cual pertenezca.<br>
+        Hemos creado un bucle para que añada una a una todas las características que se encuentran en la lista de características, de esta forma nos aseguramos que se incluyan todas y cada una
+        Finalmente añadimos “file.close()” para indicar al programa que acabe de generar la página web, sin está orden el programa se ejecutaría con un error impidiendo que el programa pueda generar las páginas web HTML.<br>
+        Creamos una variable llamada nave, su valor es una lista conteniendo todos los diccionarios que queremos añadir, cada diccionario contiene las especificaciones de los servicios que queremos generar. En nuestro caso los diccionarios contienen los campos de los servicios que queremos añadir en nuestra página web.<br>
+        Finalmente creamos un bucle para que recoja uno a uno los servicios en forma de diccionario que contiene la variable nave y ejecute la función crearPagina, declarada en el interior del bucle, para que genere una página web por cada diccionario que incluye la variable nave.</p>
+
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
         </footer>

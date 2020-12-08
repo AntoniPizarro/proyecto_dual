@@ -176,12 +176,33 @@ a:active {
 /*Estilos documentación*/
 
 .titleDoc {
+    font-size: 60px;
     text-align: center;
 }
 
 .subTitle {
+    font-size: 30px;
     text-align: center;
     color: black;
+    padding-top: 70px;
+    text-decoration: underline;
+}
+
+.h4title{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 100px;
+}
+
+.h6title {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 17px;
 }
 
 .bodyDoc {
@@ -190,10 +211,36 @@ a:active {
     cursor: context-menu;
 }
 
+.explain li {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: medium;
+    padding: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .doc li {
     color: black;
 }
 
+.pDoc {
+    margin: 75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+}
+
+.imgDoc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 5%;
+    padding: 25px;
+}
+
+/*Links of the documentation*/
 .doc a:link {
     color: black;
     text-decoration: none;

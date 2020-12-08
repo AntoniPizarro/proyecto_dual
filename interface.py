@@ -29,7 +29,7 @@ insertarMenu.add_command(label="Generar en sitio WEB", command=lambda: webSite()
 insertarMenu.add_command(label="Generar en MongoAtlas", command=lambda: mongo())
 insertarMenu.add_command(label="Generar en sitio WEB y MongoAtlas", command=lambda: webMongo())
 
-ayudaMenu.add_command(label="Documentación", command=lambda: webbrowser.open("https://proyectodual.000webhostapp.com/documentacion.html"))
+ayudaMenu.add_command(label="Documentación", command=lambda: webbrowser.open("https://proyectodual.000webhostapp.com/documentaci%C3%B3n/documentaci%C3%B3n.html"))
 
 genProd = 0
 

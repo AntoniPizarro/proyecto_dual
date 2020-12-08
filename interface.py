@@ -3,7 +3,7 @@
 #Importación librerías
 from tkinter import *
 import domain.src.scrappingLinks as scrap
-from repository.PythonToMongo import insertarUno
+from repository import PythonToMongo as pymo
 from resources.Generador_paginas_WEB import crearPagina
 import webbrowser
 
@@ -229,10 +229,10 @@ def newProduct():
     if genProd == 0:
         crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
     elif genProd == 1:
-        insertarUno(product)
+        pymo.insertarUno(product)
     elif genProd == 2:
         crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
-        insertarUno(product)
+        pymo.insertarUno(product)
 
 def comprChecks():
     caractCount = 0

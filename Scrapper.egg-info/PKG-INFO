@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Scrapper
+Version: 0.0.1
+Summary: Scrapping Program
+Home-page: https://github.com/AntoniPizarro/proyecto_dual.git
+Author: Toni
+Author-email: apizarro@cifpfbmoll.eu
+License: UNKNOWN
+Description: # proyecto_dual
+        Incluiremos todos los archivos que conforman nuestro proyecto
+        roberta
+        a la huerta
+        a por cerveza
+        jihniuy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

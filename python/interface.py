@@ -1,43 +1,53 @@
-#21/11/2020 - 0:55 / 1:50
-#26/11/2020 - 21:31 / 23:27
 #https://docs.python.org/3/library/tk.html
 
+#Importación librerías
 from tkinter import *
 import Scraping
 from PythonToMongo import insertarUno
-import Generador_paginas_WEB as gpw
+from Generador_paginas_WEB import crearPagina
+import webbrowser
 
-ventana = Tk() #Crear ventana
-ventana.geometry("500x600") #Establecer dimensiones
+#Configuración de la ventana principal
+ventana = Tk()
+ventana.geometry("500x600")
+
+#Creación del menú
 barraMenu = Menu(ventana)
 ventana.config(menu=barraMenu)
-
 scrapMenu = Menu(barraMenu, tearoff=0)
 insertarMenu = Menu(barraMenu, tearoff=0)
+ayudaMenu = Menu(barraMenu, tearoff=0)
 
+#Configuración de opciones del menú
 barraMenu.add_cascade(label="Scrap", menu=scrapMenu)
 barraMenu.add_cascade(label="Generar Producto", menu=insertarMenu)
+barraMenu.add_cascade(label="Ayuda", menu=ayudaMenu)
 
 scrapMenu.add_command(label="Obtener todos los datos", command=lambda: todosDatos(True))
 
 insertarMenu.add_command(label="Generar en sitio WEB", command=lambda: webSite())
 insertarMenu.add_command(label="Generar en MongoAtlas", command=lambda: mongo())
 insertarMenu.add_command(label="Generar en sitio WEB y MongoAtlas", command=lambda: webMongo())
+
+ayudaMenu.add_command(label="Documentación", command=lambda: webbrowser.open("https://proyectodual.000webhostapp.com/documentacion.html"))
+
 genProd = 0
+
+#Funciones
 def webSite():
-    introducirDatos(True)
     global genProd
     genProd = 0
+    introducirDatos(True)
 
 def mongo():
-    introducirDatos(True)
     global genProd
     genProd = 1
+    introducirDatos(True)
 
 def webMongo():
-    introducirDatos(True)
     global genProd
     genProd = 2
+    introducirDatos(True)
 
 def introducirDatos(activacion):
     if activacion == True:
@@ -73,6 +83,10 @@ def introducirDatos(activacion):
         altimgLabel.grid(padx=5, pady=5, row=9, column=0)
         altimgInput.grid(padx=5, pady=5, row=10, column=0)
         blanco8.grid(padx=5, pady=5, row=12, column=1)
+
+        archivoLabel.grid(padx=5, pady=5, row=3, column=2)
+        archivoInput.grid(padx=5, pady=5, row=4, column=2)
+        blanco9.grid(padx=5, pady=5, row=5, column=2)
 
         introducirDatosBoton.grid(padx=5,row=1, column=2)
 
@@ -115,6 +129,19 @@ def introducirDatos(activacion):
         plazasLabel.grid_forget()
         plazasInput.grid_forget()
         blanco6.grid_forget()
+
+        urlimgLabel.grid_forget()
+        urlimgInput.grid_forget()
+        blanco7.grid_forget()
+
+        altimgLabel.grid_forget()
+        altimgInput.grid_forget()
+        blanco8.grid_forget()
+
+        archivoLabel.grid_forget()
+        archivoInput.grid_forget()
+        blanco9.grid_forget()
+
         introducirDatosBoton.grid_forget()
 
         caracteristica1.grid_forget()
@@ -152,6 +179,7 @@ def obtenerTodosDatos(link):
     cajaTexto.delete(0, END)
 
 def newProduct():
+    global genProd
     caractSelected = []
     for checks in estadosCheckBox:
         if checks.get() == 1:
@@ -185,32 +213,127 @@ def newProduct():
                 caractSelected.append("Puerto")
             elif checks == chekState15:
                 caractSelected.append("Velas solares")
-    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'tasa' : tasaInput.get(), 'color' : colorInput.get(), 'plazas' : plazasInput.get(), 'caracteristicas' : caractSelected}
+    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'archivo' : archivoInput.get(), 'img_dir' : urlimgInput.get(), 'img_alt' : altimgInput.get(), 'tasa' : tasaInput.get(), 'color' : colorInput.get(), 'plazas' : plazasInput.get(), 'caracteristicas' : caractSelected}
     modeloInput.delete(0, END)
     marcaInput.delete(0, END)
     gamaInput.delete(0, END)
     tasaInput.delete(0, END)
     colorInput.delete(0, END)
     plazasInput.delete(0, END)
+    altimgInput.delete(0, END)
+    archivoInput.delete(0, END)
+    urlimgInput.delete(0, END)
+    for estado in estadosCheckBox:
+        estado.set(0)
     print(product)
-    global genProd
     if genProd == 0:
-        pass
+        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
     elif genProd == 1:
-        pass
+        insertarUno(product)
     elif genProd == 2:
-        pass
+        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
+        insertarUno(product)
 
+def comprChecks():
+    caractCount = 0
+    for checks in estadosCheckBox:
+        if checks.get() == 1:
+            if checks == chekState1:
+                caractCount += 1
+            elif checks == chekState2:
+                caractCount += 1
+            elif checks == chekState3:
+                caractCount += 1
+            elif checks == chekState4:
+                caractCount += 1
+            elif checks == chekState5:
+                caractCount += 1
+            elif checks == chekState6:
+                caractCount += 1
+            elif checks == chekState7:
+                caractCount += 1
+            elif checks == chekState8:
+                caractCount += 1
+            elif checks == chekState9:
+                caractCount += 1
+            elif checks == chekState10:
+                caractCount += 1
+            elif checks == chekState11:
+                caractCount += 1
+            elif checks == chekState12:
+                caractCount += 1
+            elif checks == chekState13:
+                caractCount += 1
+            elif checks == chekState14:
+                caractCount += 1
+            elif checks == chekState15:
+                caractCount += 1
+    if caractCount >= 6:
+        for checks in estadosCheckBox:
+            if checks.get() == 0:
+                if checks == chekState1:
+                    caracteristica1.config(state=DISABLED)
+                elif checks == chekState2:
+                    caracteristica2.config(state=DISABLED)
+                elif checks == chekState3:
+                    caracteristica3.config(state=DISABLED)
+                elif checks == chekState4:
+                    caracteristica4.config(state=DISABLED)
+                elif checks == chekState5:
+                    caracteristica5.config(state=DISABLED)
+                elif checks == chekState6:
+                    caracteristica6.config(state=DISABLED)
+                elif checks == chekState7:
+                    caracteristica7.config(state=DISABLED)
+                elif checks == chekState8:
+                    caracteristica8.config(state=DISABLED)
+                elif checks == chekState9:
+                    caracteristica9.config(state=DISABLED)
+                elif checks == chekState10:
+                    caracteristica10.config(state=DISABLED)
+                elif checks == chekState11:
+                    caracteristica11.config(state=DISABLED)
+                elif checks == chekState12:
+                    caracteristica12.config(state=DISABLED)
+                elif checks == chekState13:
+                    caracteristica13.config(state=DISABLED)
+                elif checks == chekState14:
+                    caracteristica14.config(state=DISABLED)
+                elif checks == chekState15:
+                    caracteristica15.config(state=DISABLED)
+    else:
+        caracteristica1.config(state=NORMAL)
+        caracteristica2.config(state=NORMAL)
+        caracteristica3.config(state=NORMAL)
+        caracteristica4.config(state=NORMAL)
+        caracteristica5.config(state=NORMAL)
+        caracteristica6.config(state=NORMAL)
+        caracteristica7.config(state=NORMAL)
+        caracteristica8.config(state=NORMAL)
+        caracteristica9.config(state=NORMAL)
+        caracteristica10.config(state=NORMAL)
+        caracteristica11.config(state=NORMAL)
+        caracteristica12.config(state=NORMAL)
+        caracteristica13.config(state=NORMAL)
+        caracteristica14.config(state=NORMAL)
+        caracteristica15.config(state=NORMAL)
+
+#Función comodín
 def nada():
-    print("Funcion comodín")
+    print("Función comodín")
+
+#Creación de los elementos de la interfaz
 etiqueta1 = Label(ventana, text = "url:")
 cajaTexto = Entry(ventana)
 etiqueta2 = Label(ventana, text = "")
 insercion = Button(ventana, text = "Insertar en la BD", command = lambda: obtenerTodosDatos(cajaTexto.get()))
 
+blanco9 = Label(ventana, text = "")
+archivoInput = Entry(ventana, width=10)
+archivoLabel = Label(ventana, text = "Nombre archivo:")
 blanco8 = Label(ventana, text = "")
 altimgInput = Entry(ventana, width=10)
-altimgLabel = Label(ventana, text = "texto alternativo imagen:")
+altimgLabel = Label(ventana, text = "Texto alternativo imagen:")
 blanco7 = Label(ventana, text = "")
 urlimgInput = Entry(ventana, width=10)
 urlimgLabel = Label(ventana, text = "url imagen:")
@@ -235,6 +358,7 @@ modeloLabel = Label(ventana, text = "Modelo:")
 blanco7 = Label(ventana, text = "")
 introducirDatosBoton = Button(ventana, height = 2, width = 20, text = "Introducir", command = lambda: newProduct())
 
+#Variables de los Check Box
 chekState1 = IntVar()
 chekState2 = IntVar()
 chekState3 = IntVar()
@@ -252,21 +376,23 @@ chekState14 = IntVar()
 chekState15 = IntVar()
 estadosCheckBox = [chekState1, chekState2, chekState3, chekState4, chekState5, chekState6, chekState7, chekState8, chekState9, chekState10, chekState11, chekState12, chekState13, chekState14, chekState15]
 
-caracteristica1 = Checkbutton(ventana, text="Turbo láser", variable = chekState1)
-caracteristica2 = Checkbutton(ventana, text="Cañones de iones", variable = chekState2)
-caracteristica3 = Checkbutton(ventana, text="Artillería", variable = chekState3)
-caracteristica4 = Checkbutton(ventana, text="Torpedos", variable = chekState4)
-caracteristica5 = Checkbutton(ventana, text="Misileros", variable = chekState5)
-caracteristica6 = Checkbutton(ventana, text="Escudos", variable = chekState6)
-caracteristica7 = Checkbutton(ventana, text="Hipervelocidad", variable = chekState7)
-caracteristica8 = Checkbutton(ventana, text="Camuflaje", variable = chekState8)
-caracteristica9 = Checkbutton(ventana, text="Patas extensibles", variable = chekState9)
-caracteristica10 = Checkbutton(ventana, text="Puente de mando", variable = chekState10)
-caracteristica11 = Checkbutton(ventana, text="Cabina", variable = chekState11)
-caracteristica12 = Checkbutton(ventana, text="Cámara de carga", variable = chekState12)
-caracteristica13 = Checkbutton(ventana, text="Hangar", variable = chekState13)
-caracteristica14 = Checkbutton(ventana, text="Puerto", variable = chekState14)
-caracteristica15 = Checkbutton(ventana, text="Velas solares", variable = chekState15)
-#C1 = Checkbutton(top, text = "Music", variable = CheckVar1, onvalue = 1, offvalue = 0, height=5, width = 20)
+#Declaración de los elementos Check Box
+caracteristica1 = Checkbutton(ventana, text="Turbo láser", variable = chekState1, command = lambda: comprChecks())
+caracteristica2 = Checkbutton(ventana, text="Cañones de iones", variable = chekState2, command = lambda: comprChecks())
+caracteristica3 = Checkbutton(ventana, text="Artillería", variable = chekState3, command = lambda: comprChecks())
+caracteristica4 = Checkbutton(ventana, text="Torpedos", variable = chekState4, command = lambda: comprChecks())
+caracteristica5 = Checkbutton(ventana, text="Misileros", variable = chekState5, command = lambda: comprChecks())
+caracteristica6 = Checkbutton(ventana, text="Escudos", variable = chekState6, command = lambda: comprChecks())
+caracteristica7 = Checkbutton(ventana, text="Hipervelocidad", variable = chekState7, command = lambda: comprChecks())
+caracteristica8 = Checkbutton(ventana, text="Camuflaje", variable = chekState8, command = lambda: comprChecks())
+caracteristica9 = Checkbutton(ventana, text="Patas extensibles", variable = chekState9, command = lambda: comprChecks())
+caracteristica10 = Checkbutton(ventana, text="Puente de mando", variable = chekState10, command = lambda: comprChecks())
+caracteristica11 = Checkbutton(ventana, text="Cabina", variable = chekState11, command = lambda: comprChecks())
+caracteristica12 = Checkbutton(ventana, text="Cámara de carga", variable = chekState12, command = lambda: comprChecks())
+caracteristica13 = Checkbutton(ventana, text="Hangar", variable = chekState13, command = lambda: comprChecks())
+caracteristica14 = Checkbutton(ventana, text="Puerto", variable = chekState14, command = lambda: comprChecks())
+caracteristica15 = Checkbutton(ventana, text="Velas solares", variable = chekState15, command = lambda: comprChecks())
 
-ventana.mainloop() #Mantener ventana abierta
+#Cargar todo el código en la ventana principal
+print("OK!")
+ventana.mainloop()

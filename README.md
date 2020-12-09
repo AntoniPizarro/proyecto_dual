@@ -10,8 +10,6 @@
 1. [Motivación](#motivación)
 1. [Tecnologías usadas](#tecnologías-usadas)
 1. [Funcionalidades](#funcionalidades)
-1. [Código de Ejemplo](#codigo-de-ejemplo)
-1. [Tests](#tests)
 1. [Guia de Uso](#guia-de-uso)
 1. [Instalación](#instalación)
 1. [Contribución](#contribución)

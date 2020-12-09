@@ -50,7 +50,9 @@ def webMongo():
     introducirDatos(True)
 
 def introducirDatos(activacion):
+    #Si activacion es True, entonces activa los widgets de la seccion Generar Producto
     if activacion == True:
+        #Oculta los widgets de la seccion Scrap
         todosDatos(False)
         modeloLabel.grid(padx=5, pady=5, row=0, column=0)
         modeloInput.grid(padx=5, pady=5, row=1, column=0)
@@ -106,6 +108,7 @@ def introducirDatos(activacion):
         caracteristica14.grid(sticky="W",padx=10, pady=5, row=17, column=1)
         caracteristica15.grid(sticky="W",padx=10, pady=5, row=17, column=2)
     else:
+        #Si activacion es False, desactiva los widgets de la seccion Generar Producto
         modeloLabel.grid_forget()
         modeloInput.grid_forget()
         blanco1.grid_forget()
@@ -161,26 +164,31 @@ def introducirDatos(activacion):
         caracteristica15.grid_forget()
 
 def todosDatos(activacion):
-    
+    #Si activacion es True, activa los widgets de la seccion Scrap
     if activacion == True:
+        #Desactiva los widgets de la seccion Generar Producto
         introducirDatos(False)
         etiqueta1.grid(padx=10, pady=5, row=0, column=0)
         cajaTexto.grid(padx=10, pady=5, row=0, column=1)
         etiqueta2.grid(padx=10, pady=5, row=1, column=0)
         insercion.grid(padx=10, pady=5, row=2, column=1)
     else:
+        #Si activacion es False, desactiva los widgets de la seccion Scrap
         etiqueta1.grid_forget()
         cajaTexto.grid_forget()
         etiqueta2.grid_forget()
         insercion.grid_forget()
 
 def obtenerTodosDatos(link):
+    #Esta es la función maestra. Recoge todos los datos del sitio web, siempre y cuando se introduzca un enlace del mismo
     scrap.webCrawler(link)
     cajaTexto.delete(0, END)
 
 def newProduct():
+    #Genera un nuevo producto
     global genProd
     caractSelected = []
+    #Se añaden las características que sean seleccionadas
     for checks in estadosCheckBox:
         if checks.get() == 1:
             if checks == chekState1:
@@ -213,7 +221,8 @@ def newProduct():
                 caractSelected.append("Puerto")
             elif checks == chekState15:
                 caractSelected.append("Velas solares")
-    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'archivo' : archivoInput.get(), 'img_dir' : urlimgInput.get(), 'img_alt' : altimgInput.get(), 'tasa' : tasaInput.get(), 'color' : colorInput.get(), 'plazas' : plazasInput.get(), 'caracteristicas' : caractSelected}
+    #Crea un diccionario con todos los datos introducidos
+    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'archivo' : archivoInput.get(), 'img_dir' : urlimgInput.get(), 'img_alt' : altimgInput.get(), 'tasa' : int(tasaInput.get()), 'color' : colorInput.get(), 'plazas' : int(plazasInput.get()), 'caracteristicas' : caractSelected}
     modeloInput.delete(0, END)
     marcaInput.delete(0, END)
     gamaInput.delete(0, END)
@@ -223,9 +232,13 @@ def newProduct():
     altimgInput.delete(0, END)
     archivoInput.delete(0, END)
     urlimgInput.delete(0, END)
+    #Desmarca las casillas de las características
     for estado in estadosCheckBox:
         estado.set(0)
+    print(" ")
     print(product)
+    #Dependiendo de la opción seleccionada en la sección Generar Producto, generará un archivo HTML en local con los datos
+    #introducidos, generará un documento en la base de datos o ambas opciones a la vez
     if genProd == 0:
         crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
     elif genProd == 1:
@@ -235,6 +248,7 @@ def newProduct():
         pymo.insertarUno(product)
 
 def comprChecks():
+    #Inhabilita las casillas de las características que excedan del límite
     caractCount = 0
     for checks in estadosCheckBox:
         if checks.get() == 1:
@@ -318,6 +332,13 @@ def comprChecks():
         caracteristica14.config(state=NORMAL)
         caracteristica15.config(state=NORMAL)
 
+def temporizador():
+    print(" ")
+    print("Funcion temporizada")
+    print(" ")
+    obtenerTodosDatos("https://proyectodual.000webhostapp.com/catalogo.html")
+    temp.after(300000, temporizador)
+
 #Función comodín
 def nada():
     print("Función comodín")
@@ -327,6 +348,10 @@ etiqueta1 = Label(ventana, text = "url:")
 cajaTexto = Entry(ventana)
 etiqueta2 = Label(ventana, text = "")
 insercion = Button(ventana, text = "Insertar en la BD", command = lambda: obtenerTodosDatos(cajaTexto.get()))
+
+temp = Label(ventana, text = "")
+temp.grid(padx=5, pady=5, row=1000, column=1000)
+temp.after(300000, temporizador)
 
 blanco9 = Label(ventana, text = "")
 archivoInput = Entry(ventana, width=10)

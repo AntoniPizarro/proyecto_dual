@@ -18,19 +18,18 @@
 
         <h3 class="subTitle">Conexión Python to Mongo</h3>
 
-        <p class="pDoc">Gracias a este documento podemos generar una conexión estable con nuestra base de datos donde podremos almacenar los servicios recogidos con nuestro Web Scrapper. Sin este documento no sería posible mantener una conexión entre la base de datos y el programa de Web Scrapper.<br>
+        <img class="imgDoc" alt="imagen de la configuración de python to mongo" src="imgs/pyToMongo.JPG">
 
-            Como podemos al inicio gracias a la herramienta de la que dispone python llamada pymongo importamos la librería MongoClient con la cual podremos hacer posible nuestra conexión entre Mongo Atlas y nuestro programa creado con Python.<br>
-            Gracias a importar pprint podremos visualizar en la CMD de forma estructurada y ordenada todos los documentos que vamos importando gracias a nuestro programa de Web Scrapping de la página web a la base de datos. Como ejemplo podemos recordar la funcionalidad del “.pretty” al trabajar con documentos JSON.<br>
-            Declaramos la función insertarUno que contendrá la variable “nave”.<br>
-            Declaramos la variable cliente que como valor contiene la la “url” para conectarnos con nuestra base de datos.<br>
-            Declaramos la variable db, que contiene el valor de la variable cliente básicamente se ha definido para ahorrar tiempo al generar el código del archivo y aumentar la productividad.<br>
-            Declaramos la variable “doc”, su valor es crear la estructura de los documentos JSON a insertar en nuestra base de datos conteniendo el nombre de todos los campos que queremos recoger de los servicios escrapeados.<br>
-            Creamos la variable con el nombre “compr” como su nombre indica la vamos a utilizar para comprobar o comparar los servicios que añadiremos en nuestra base de datos con los servicios ya incluidos.<br>
-            Creamos una variable “documentos”, la función de la cual es encontrar en la base de datos documentos con el mismo valor que la variable “compr”.<br>
-            Creamos un condicional para el caso de que la cuenta de documentos con el mismo nombre que compr sea 0, añada el documento en la base de datos y devuelva un mensaje notificándonos de que el servicio se ha guardado en la base de datos.<br>
-            En el caso de que la cuenta sea mayor a 0, nos devolverá un mensaje informándonos que el servicio correspondiente que intentamos añadir pero que ya se encuentra en la base de datos ha sido actualizado, de esta forma evitaremos insertar documentos duplicados en la base de datos.
-            </p>
+        <p class="pDoc">Gracias a este documento podemos generar una conexión estable con nuestra base de datos donde podremos almacenar o actualizar los servicios recogidos con nuestro Web Scrapper. Sin este documento no sería posible mantener una conexión entre la base de datos y el programa de Web Scrapper.<br>
+
+            El programa se inicia importando la librería para establecer la conexión llamada <i>pymongo</i>, de la que solo utilizaremos las funciones de <i>MongoClient</i>. Adicionalmente, hemos decidido importar una librería llamada <i>pprint</i> que permite visualizar los diccionarios de forma escalada.<br>
+            Declaramos la función <b>insertarUno</b> que contendrá el parámetro <i>nave</i>, que debe ser un diccionario.<br>
+            Declaramos la variable <b>cliente</b> hará referencia a todo lo relacionado con el cluster de nuestra base de datos.<br>
+            Declaramos la variable <b>db</b> que hace referencia a la base de datos del cluster.<br>
+            Declaramos la variable <b>doc</b> su valor un diccionario que almacena los campos de <i>nave</i> para introducir posteriormente en la base de datos.<br>
+            Creamos la variable <b>compr</b>, que como su nombre indica la vamos a utilizar para comprobar si el servicio que queremos introducir ya está repetido. Su valor consiste en un simple diccionario de un campo: el nombre del servicio.<br>
+            Creamos la variable <b>documentos</b> que busca todos los documentos que coincidan con <i>compr</i>.<br>
+            Creamos un condicional que mediante la variable <i>documentos</i>, contara si ya existen documentos coincidentes. En caso de no existir coincidencias, creará el documento dentro de la base de datos. De lo contrario, actualizará el campo ya existente.</p>
 
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados

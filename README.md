@@ -9,7 +9,7 @@
 
 1. [Motivación](#motivación)
 1. [Tecnologías usadas](#tecnologías-usadas)
-1. [Features](#features)
+1. [Funcionalidades](#funcionalidades)
 1. [Código de Ejemplo](#codigo-de-ejemplo)
 1. [Tests](#tests)
 1. [Guia de Uso](#guia-de-uso)
@@ -47,14 +47,15 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 
 ---
 
-## Features
+## Funcionalidades
 
 - [x] Escrapea páginas "https"
 - [x] Almacena la información en una base de datos
 - [x] No se requiere registro o inicio de sesión
 - [x] Dispone de GUI
+- [x] Actualización automática de la base de datos
 - [ ] Actualizaciones automáticas
-- [ ] Ejecución automática
+- [ ] Servicio de atención al cliente
 
 **[⬆ back to top](#tabla-de-contenidos)**
 

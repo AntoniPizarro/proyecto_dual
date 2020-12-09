@@ -71,7 +71,7 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 
 > git clone https://github.com/AntoniPizarro/proyecto_dual.git
 
-4. A continuación podemos proceder con su uso tan solo accediendo al directorio “resources” y ejecutando el archivo llamado “interface.py”
+4. A continuación podemos proceder con su uso tan solo accediendo al documento y ejecutando el archivo llamado “interface.py”
 
 **[⬆ back to top](#tabla-de-contenidos)**
 
@@ -81,7 +81,7 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 
 A continuación explicaremos los conceptos necesarios para poder usar la _interfaz gráfica_ (GUI), la cual nos permitirá ejecutar todas las funcionalidades de nuestro programa.
 
-1. Primero de todo accedemos al directorio _“resources”_, en el cual encontraremos el archivo _“interface.py”_ y procedemos a ejecutarlo, haciendo doble clic sobre él o pulsando botón izquierdo y seleccionando la opción _“abrir”_.
+1. Primero de todo accedemos documento _“interface.py”_ y procedemos a ejecutarlo, haciendo doble clic sobre él o pulsando botón izquierdo y seleccionando la opción _“abrir”_.
 
 2. A continuación podremos observar que se nos habre la consola, aunque mantendrá la pantalla en negro y al mismo tiempo se nos abrirá otra pestaña conteniendo la GUI de nuestra aplicación.
 

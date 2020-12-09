@@ -1,25 +1,20 @@
+# Obtener codigo html
+
 import requests
+from repository.PythonToMongo import insertarUno
+
+# insertarUno(obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")))
 
 
-def obtenerCodigo(webCrawler):
+def obtenerCodigo(url):
+    if len(url) < 1 or type(url) != str:
+        return False
     cabecera = "https://proyectodual.000webhostapp.com/"
-    inexistent = requests.get(
-        "https://proyectodual.000webhostapp.com/1981781ji98p7654yrtgfhjkliop897i6u54yerdgtfhjkuio98")
-    if type(webCrawler) != str or len(webCrawler) < 1:
-        return False
-    else:
-        pass
-    if webCrawler.find('https') == -1:
-        webCrawler = cabecera + webCrawler
-    else:
-        pass
-    r = requests.get(webCrawler)
-    codigoWeb = r.text
-    if codigoWeb == inexistent.text:
-        return False
-    else:
-        pass
-    return codigoWeb
+    if url.find('https') == -1:
+        url = cabecera + url
+    r = requests.get(url)
+    url = r.text
+    return url
 
 
 def obtenerDatos(codigo):
@@ -51,8 +46,6 @@ def getLinks(url):
     codigo = url
     if url == -1:
         codigo = obtenerCodigo(url)
-    else:
-        pass
     listaLinks = []
     listaProhibidos = ["./index.html", "../index.html",
                        "./contacto.html", "../contacto.html", "baja.html", "media.html", "alta.html"]
@@ -82,13 +75,11 @@ def union(p, q):
     for e in q:
         if e not in p:
             p.append(e)
-        else:
-            pass
     return p
 
 
 def webCrawler(seed):
-    banedLinks = [seed, "https://proyectodual.000webhostapp.com/",
+    banedLinks = [seed,
                   "./catalogo.html", "../catalogo.html"]
     toCrawl = [seed]
     crawled = []
@@ -99,7 +90,7 @@ def webCrawler(seed):
             crawled.append(page)
     for link in crawled:
         if link not in banedLinks:
-            obtenerDatos(obtenerCodigo(link))
+            insertarUno(obtenerDatos(obtenerCodigo(link)))
         else:
             pass
     return crawled

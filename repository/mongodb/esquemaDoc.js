@@ -1,9 +1,9 @@
 nave:{
-    marca : string,
     modelo : string,
-    precio: int,
-    color : string,
+    marca : string,
     gama : string,
-    plazas : int
+    tasa: int,
+    color : string,
+    plazas : int,
     características: array
     }

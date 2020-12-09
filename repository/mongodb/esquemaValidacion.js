@@ -4,19 +4,23 @@ db.createCollection("UFOs",{
             bsonType:"object",
             required:["marca","modelo",  "precio", "color","gama", "plazas", "caracteristicas"],
             properties:{
-                marca:{
-                    bsonType:"string",
-                    description:"Debe ser un valor de tipo string"
-                },
                 modelo:{
                     bsonType:"string",
                     description:"Debe ser un valor de tipo string"
                 },
-                color:{
+                marca:{
                     bsonType:"string",
                     description:"Debe ser un valor de tipo string"
                 },
                 gama:{
+                    bsonType:"string",
+                    description:"Debe ser un valor de tipo string"
+                },
+                tasa:{
+                    bsonType:"integer",
+                    description:"Debe ser un valor de tipo integro"
+                },
+                color:{
                     bsonType:"string",
                     description:"Debe ser un valor de tipo string"
                 },
@@ -26,7 +30,10 @@ db.createCollection("UFOs",{
                 },
                 caracteristicas:{
                     bsonType:"array",
-                    description:"Debe ser un valor de tipo array"
+                    items: {
+                        bsonType: "string",
+                        description: "se requiere un valor de tipo string"
+                    }
                 }
             }
         }

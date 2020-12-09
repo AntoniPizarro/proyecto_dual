@@ -222,7 +222,7 @@ def newProduct():
             elif checks == chekState15:
                 caractSelected.append("Velas solares")
     #Crea un diccionario con todos los datos introducidos
-    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'archivo' : archivoInput.get(), 'img_dir' : urlimgInput.get(), 'img_alt' : altimgInput.get(), 'tasa' : tasaInput.get(), 'color' : colorInput.get(), 'plazas' : plazasInput.get(), 'caracteristicas' : caractSelected}
+    product = {'modelo' : modeloInput.get(), 'marca' : marcaInput.get(), 'gama' : gamaInput.get(), 'archivo' : archivoInput.get(), 'img_dir' : urlimgInput.get(), 'img_alt' : altimgInput.get(), 'tasa' : int(tasaInput.get()), 'color' : colorInput.get(), 'plazas' : int(plazasInput.get()), 'caracteristicas' : caractSelected}
     modeloInput.delete(0, END)
     marcaInput.delete(0, END)
     gamaInput.delete(0, END)

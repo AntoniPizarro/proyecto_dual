@@ -41,6 +41,7 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 - requests
 - tkinter
 - MongoClient
+- dnspython
 
 **[⬆ back to top](#tabla-de-contenidos)**
 

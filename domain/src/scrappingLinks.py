@@ -40,8 +40,7 @@ def obtenerDatos(codigo):
     codigo = codigo[codigo.find("<p>Color:"):]
     color = codigo[codigo.find(
         "<p>Color:") + 10: codigo[codigo.find("<p>Color:"):].find("</p>")]
-    plazas = int(
-        codigo[codigo.find("<h2>Numero de plazas: <b>") + 25: codigo.find("</b>")])
+    plazas = codigo[codigo.find("<h2>Numero de plazas: <b>") + 25: codigo.find("</b>")]
     # Arreglamos el codigo para buscar las caracteristicas
     codigo = codigo[codigo.find("<div class=\"caracteristicas\">") + 29:]
     caracteristicas = []

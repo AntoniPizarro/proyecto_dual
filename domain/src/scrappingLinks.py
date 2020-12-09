@@ -1,7 +1,7 @@
 # Obtener codigo html
 
 import requests
-from repository.PythonToMongo import insertarUno
+from .PythonToMongo import insertarUno
 
 # insertarUno(obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")))
 
@@ -41,7 +41,7 @@ def obtenerDatos(codigo):
     color = codigo[codigo.find(
         "<p>Color:") + 10: codigo[codigo.find("<p>Color:"):].find("</p>")]
     plazas = int(
-        codigo[codigo.find("<h2>Numero de plazas: <b>") + 25: codigo.find("</b>")])
+        codigo[codigo.find("<h2>Número de plazas: <b>") + 25: codigo.find("</b>")])
     # Arreglamos el codigo para buscar las caracteristicas
     codigo = codigo[codigo.find("<div class=\"caracteristicas\">") + 29:]
     caracteristicas = []

@@ -53,8 +53,9 @@ Este proyecto sobre **Web Scrapping** ha sido fruto del trabajo del primer año 
 - [x] Almacena la información en una base de datos
 - [x] No se requiere registro o inicio de sesión
 - [x] Dispone de GUI
+- [x] Actualización automática de la base de datos
 - [ ] Actualizaciones automáticas
-- [ ] Ejecución automática
+- [ ] Servicio de atención al cliente
 
 **[⬆ back to top](#tabla-de-contenidos)**
 

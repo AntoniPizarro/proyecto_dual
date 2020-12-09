@@ -119,6 +119,3 @@ def webCrawler(seed):
         else:
             pass
     return crawled
-
-if __name__ == "__main__":
-    assert obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")) == False

@@ -27,12 +27,7 @@ def obtenerCodigo(webCrawler):
     codigoWeb = r.text
     if codigoWeb == inexistent.text:
         return False
-    cabecera = "https://proyectodual.000webhostapp.com/"
-    if url.find('https') == -1:
-        url = cabecera + url
-    r = requests.get(url)
-    url = r.text
-    return url
+    return codigoWeb
 
 
 def obtenerDatos(codigo):
@@ -64,12 +59,8 @@ def getLinks(url):
     # Creamos una variable para el link, los enlaces que recogeremos del correspondiente link y los links que queremos evitar recoger
     codigo = url
 
-
-<< << << < HEAD
-== == == =
     if url == -1:
         codigo = obtenerCodigo(url)
->>>>>> > evolutive
     listaLinks = []
     listaProhibidos = ["./index.html", "../index.html",
                        "./contacto.html", "../contacto.html", "baja.html", "media.html", "alta.html"]
@@ -111,20 +102,14 @@ def union(p, q):
 
 
 def webCrawler(seed):
-
-
-<< << << < HEAD
     # Creamos tres variables que tendrán el valor de tres listas distintas, en bannedLinks hemos añadido los links con los cuales no nos interesa trabajar, en toCrawl los links que aún falta para crawlear y en crawled los links que yahan sido crawleados
     banedLinks = [seed, "https://proyectodual.000webhostapp.com/",
-== == == =
-    banedLinks= [seed,
->>>>>> > evolutive
                   "./catalogo.html", "../catalogo.html"]
-    toCrawl= [seed]
-    crawled= []
+    toCrawl = [seed]
+    crawled = []
     # Creamos un bucle que funcionará mientras toCrawl no esté vacia, y eliminamos el último link de la lista que tendrá el valor de la variable "page"
     while toCrawl:
-        page= toCrawl.pop()
+        page = toCrawl.pop()
         # Comprobamos que el valor de la variable page no se encuntre dentro de la lista de los links ya crawleados, en el caso de que no se encuentre, invocaremos al resto de funciones
         if page not in crawled:
             union(toCrawl, getLinks(obtenerCodigo(page)))

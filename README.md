@@ -160,7 +160,7 @@ Es la mezcla de las funcionalidades de las dos pestañas anteriores.
 
 ## Documentación
 
->
+> https://proyectodual.000webhostapp.com/documentaci%C3%B3n/documentaci%C3%B3n.html
 
 **[⬆ back to top](#tabla-de-contenidos)**
 

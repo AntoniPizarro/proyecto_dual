@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Python to Mongo</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Conexión Python to Mongo</h3>
+
+        <img class="imgDoc" alt="imagen de la configuración de python to mongo" src="imgs/pyToMongo.JPG">
+
+        <p class="pDoc">Gracias a este documento podemos generar una conexión estable con nuestra base de datos donde podremos almacenar o actualizar los servicios recogidos con nuestro Web Scrapper. Sin este documento no sería posible mantener una conexión entre la base de datos y el programa de Web Scrapper.<br>
+
+            El programa se inicia importando la librería para establecer la conexión llamada <i>pymongo</i>, de la que solo utilizaremos las funciones de <i>MongoClient</i>. Adicionalmente, hemos decidido importar una librería llamada <i>pprint</i> que permite visualizar los diccionarios de forma escalada.<br>
+            Declaramos la función <b>insertarUno</b> que contendrá el parámetro <i>nave</i>, que debe ser un diccionario.<br>
+            Declaramos la variable <b>cliente</b> hará referencia a todo lo relacionado con el cluster de nuestra base de datos.<br>
+            Declaramos la variable <b>db</b> que hace referencia a la base de datos del cluster.<br>
+            Declaramos la variable <b>doc</b> su valor un diccionario que almacena los campos de <i>nave</i> para introducir posteriormente en la base de datos.<br>
+            Creamos la variable <b>compr</b>, que como su nombre indica la vamos a utilizar para comprobar si el servicio que queremos introducir ya está repetido. Su valor consiste en un simple diccionario de un campo: el nombre del servicio.<br>
+            Creamos la variable <b>documentos</b> que busca todos los documentos que coincidan con <i>compr</i>.<br>
+            Creamos un condicional que mediante la variable <i>documentos</i>, contara si ya existen documentos coincidentes. En caso de no existir coincidencias, creará el documento dentro de la base de datos. De lo contrario, actualizará el campo ya existente.</p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

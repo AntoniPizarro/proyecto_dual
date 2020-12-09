@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Explicación de Funciones</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Obtener Código</a></h3>
+
+        <ul class="contribuidores">
+            <li><a href="../5explicaciónFunciones.html">Explicación Funciones</a></li>
+        </ul>
+
+        <img class="imgDoc" src="../imgs/obtenerCodigo.JPG">
+
+        <p>Está es la función principal de nuestro programa, desde está función invocaremos a las demás y ejecutaremos los porcesos necesarios para obtener los datos que necesitamos de nuestra página web y el Web Crawler y el Web Scrapper habrá cumplido la función para la que fueron creados.<br><br>
+        Al inicio creamos una lista llamada bannedLinks y en su interior contiene todos los links con los cuales no queremos trabajar ya que podría romper nuestro programa, en este caso todas las rutas variables con las que no deseamos trabajar.<br><br>
+        Creamos una lista llamada toCrawl, al inicio solo incluirá el link de cabecera, que en este caso decidimos llamarlo “seed”, ya que a partir de este link podremos obtener todos los demás.<br><br>
+        Creamos la última lista llamada crawled, en ella incluiremos todos los links sobre los que ya hemos ejecutado el Crawler y no queremos volver a trabajar sobre ellos, ya que hemos obtenido la información necesaria y queremos evitar que nuestro programa se bloque en un bucle infinito, siempre recogiendo la misma información.<br><br>
+        Creamos el primer bucle que indica que mientras la lista de toCrawl no este vacía continué ejecutándose.<br><br>
+        Creamos una variable llamada page, que su función será eliminar el último link que se encuentre en la lista toCrawl y adoptar su valor.<br><br>
+        Adopta el valor del link que elimina de la lista toCrawl.<br><br>
+        Creamos un condicional para asegurarnos que la variable page, que contiene un link, no se encuentre ya en la lista e links crawleados.<br><br>
+        En el caso de que no se encuentre, pasaremos a invocar el resto de funciones menos obtenerDatos, ya que no nos interesa recoger los datos aún mientras no sepamos sobre todos los links que necesitamos obtener los datos.<br><br>
+        Primero de todo invocaremos a obtenerCodigo, que nos devolverá el código en formato string y legible de la variable page, sobre el cual podremos trabajar posteriormente.<br><br>
+        De obtenerCodigo pasaremos a invocar getLinks que gracias a está función lograremos recoger y guardar todos los links sobre los que queremos trabajar en una variable de tipo array (listaLinks).<br><br>
+        Y finalmente Union invocará a lista toCrawl, que como hemos dicho anteriormente adoptará el valor de “p” y a la función getLinks que en este caso adoptará el valor de “q” dentro de Union, y nos irá añadiendo todos los links que acabamos de recoger de page en la lista toCrawl en el caso de que no se encuentren ya en ella.<br><br>
+        Finalmente añadimos el valor de la variable page a la lista “crawled”, de esta forma evitaremos trabajar sobre links que ya hemos crawleado anteriormente y mantendremos un registro de todos los links con los que trabajamos.<br><br>
+        Creamos otros bucle que en este caso se ejecutará para cada uno de los links que haya en el interior de la lista Crawled, en este punto en la lista crawled deberíamos tener en su interior los links con los que queremos trabajar y sabemos que contienen información útil.<br><br>
+        A continuación comprobamos que el link con el que vamos a trabajar no se encuentre en el interior de la lista bannedLinks.<br><br>
+        En el caso de que no se encuentre invocaremos a la función obtenerCodigo, para obtener el código del link en un formato el cual podamos trabajar con el.<br><br>
+        A continuación una vez obtenido el código, invocaremos a la función obtenerDatos, para recoger los datos para el cual ha sido diseñado este programa de web scrapping.<br><br>
+        En el caso de que el link con el que queremos trabajar se encuentre en el interior de la lista bannedLinks, simplemente pasaremos al siguiente.<br><br>
+        Finalmente está función devolverá la lista  de los links que hemos crawleado.
+        </p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

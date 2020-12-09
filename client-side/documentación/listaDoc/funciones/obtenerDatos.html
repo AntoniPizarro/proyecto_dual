@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Explicación de Funciones</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Obtener Datos</a></h3>
+
+        <ul class="contribuidores">
+            <li><a href="../5explicaciónFunciones.html">Explicación Funciones</a></li>
+        </ul>
+
+        <img class="imgDoc" src="../imgs/obtenerDatos.JPG">
+
+        <p>En la función Obtener Datos, su objetivo es muy simple, como indica el nombre lo que nos devolverá está función serán todos los datos que nos interesan sobre la página web que pensábamos recoger información, a continuación explicaremos su funcionamiento con minuciosidad.<br><br>
+        Al principio definimos las variables con las que queremos trabajar y a cada una le asignamos los nombres de los parámetros que esperamos encontrar en el código de la página web.<br><br>
+        En cada una de las variables hacemos un “slice” para obtener solamente el fragmento de código con la información que deseamos conseguir y con la que trabajaremos posteriormente. <br><br>
+        Acto seguido dentro del “slice” como podemos observar hemos definido un “find” a cada lado donde ejecutaremos el recorte para que nos devuelva la posición de donde se encuentra la información con la que queremos trabajar, de esa forma conseguiremos que la variable contenga la información que necesitamos sin nada adicional.<br><br>
+        Al acabar de definir todas las variables, definimos una lista llamada características, que al principio se encuentra vacía.<br><br>
+        Creamos un loop que nos añada las características ofrecidas por cada servicio. Para encontrar las características utilizaremos el “slice” y el “find” como recursos igual que los hemos usado anteriormente, pero como en este caso se trata de un array de información queremos ejecutar está orden las veces necesarias hasta que ya no encuentre más características del servicio.<br><br>
+        A continuación creamos un diccionario, donde cada campo del diccionario está definido por el nombre identificador de la información´
+        que esperábamos obtener y cada valor de cada campo está representado con el valor de las variables con las que hemos trabajado.<br><br>
+        Finalmente está función nos devolverá toda la información del servicio que deseado en formato de diccionario, con el que nosotros posteriormente añadiremos a nuestra base de datos.
+        </p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

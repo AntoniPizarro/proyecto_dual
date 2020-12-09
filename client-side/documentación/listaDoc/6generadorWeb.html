@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Generador de Páginas Web</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Generador de Páginas Web</h3>
+
+        <img class="imgDoc" alt="imagen del código del generador web de páginas" src="imgs/generador.JPG">
+
+        <p class="pDoc">Este archivo fue creado para poder generar páginas web a gran velocidad. Su intención es poder agilizar el trabajo y aumentar el rendimiento al igual que la productividad dentro del equipo de trabajo.<br>
+        Básicamente su función es crear páginas web para poder añadir servicios al sitio web de la empresa, ajustándose a los parámetros que ofrecen los distintos servicios ya ofertados y visualizados por los consumidores en la página web de la compañía.<br><br>
+        
+        Como podemos ver al inicio, para ejecutar este generador de páginas web, requerimos el uso de la librería <i>os</i> proporcionada por python. Esta librería nos permite acceder a las funcionalidades del sistema operativo, permitiéndonos manipular la estructura de directorios para, por ejemplo, leer y escribir archivos. En este caso utilizaremos la funcionalidad que nos permite escribir archivos proporcionada por esta librería.<br>        
+        El archivo se centra en una única función llamada <i>crearPagina</i>, en la cual le pasamos todas las variables necesarias para poder generar los campos que necesitamos para los servicios de nuestra página web.
+        Declaramos la variable llamada <i>direccion</i>, en la que su funcionalidad es guardar los documentos que generemos con el generados en un directorio específico del proyecto.<br>
+        La variable <i>file</i> hace referencia al archivo que será generado en la dirección especificada anteriormente y va tener la extensión <b>.html</b>. El documento será abierto en modo <b>w</b> (write) y utilizaremos un encoding <b>utf-8</b> para que los caracteres que se visualizarán en pantalla tengan un formato legible.<br>
+        Al haber creado la variable <i>file</i> con la función de <i>os</i>, podemos observar como tiene un nuevo método llamado <i>write</i>, que se encarga de introducir contenido en el archivo.
+        Dependiendo de la <b>gama</b> del servicio a generar, se definirá la <b>tasa</b> de dicho servicio, que es básicamente un pago por el servicio prestado.<br>
+        Las características, que están contenidas en un <i>array</i>, se introducen una a una gracias a un bucle contador.
+        Una vez se han escrito todas las líneas del código HTML, terminamos la escritura del archivo con el método <i>close</i>.<br>
+        Una vez definida la función, generamos las primeras 11 páginas web con los servicios que queramos introducir. Estos son contenidos dentro de una variable de tipo array en forma de diccionarios.
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

@@ -41,7 +41,7 @@ def crearPagina(nombre, marca, archivo, gama, color, img_dir, img_alt, capacidad
         pass
     file.write("            <p>Color: " + color +"</p>" + os.linesep)
     file.write("            <img class=\"img\" alt=\"" + img_alt + "\" src=\"" + img_dir + "\">" + os.linesep)
-    file.write("            <h2>Número de plazas: <b>" + str(capacidad) + "</b></p>" + os.linesep)
+    file.write("            <h2>Número de plazas: <b>" + str(capacidad) + "</b></h2>" + os.linesep)
     file.write("                <h3>Características:</h3>" + os.linesep)
     file.write("            <!--Características-->" + os.linesep)
     file.write("            <div class=\"caracteristicas\">" + os.linesep)

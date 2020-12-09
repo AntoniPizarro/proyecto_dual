@@ -240,11 +240,11 @@ def newProduct():
     #Dependiendo de la opción seleccionada en la sección Generar Producto, generará un archivo HTML en local con los datos
     #introducidos, generará un documento en la base de datos o ambas opciones a la vez
     if genProd == 0:
-        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], str(product['plazas']), product['caracteristicas'], )
+        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
     elif genProd == 1:
         pymo.insertarUno(product)
     elif genProd == 2:
-        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], str(product['plazas']), product['caracteristicas'], )
+        crearPagina(product['modelo'], product['marca'], product['archivo'], product['gama'], product['color'], product['img_dir'], product['img_alt'], product['plazas'], product['caracteristicas'], )
         pymo.insertarUno(product)
 
 def comprChecks():

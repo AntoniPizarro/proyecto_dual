@@ -51,7 +51,7 @@ def crearPagina(nombre, marca, archivo, gama, color, img_dir, img_alt, capacidad
     file.write("            </div>" + os.linesep)
     file.write("        </div>" + os.linesep)
     file.write("        <footer>" + os.linesep)
-    file.write("            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados" + os.linesep)
+    file.write("            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados." + os.linesep)
     file.write("        </footer>" + os.linesep)
     file.write("</body>" + os.linesep)
     file.write("</html>")

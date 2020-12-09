@@ -332,6 +332,13 @@ def comprChecks():
         caracteristica14.config(state=NORMAL)
         caracteristica15.config(state=NORMAL)
 
+def temporizador():
+    print(" ")
+    print("Funcion temporizada")
+    print(" ")
+    obtenerTodosDatos("https://proyectodual.000webhostapp.com/catalogo.html")
+    temp.after(300000, temporizador)
+
 #Función comodín
 def nada():
     print("Función comodín")
@@ -341,6 +348,10 @@ etiqueta1 = Label(ventana, text = "url:")
 cajaTexto = Entry(ventana)
 etiqueta2 = Label(ventana, text = "")
 insercion = Button(ventana, text = "Insertar en la BD", command = lambda: obtenerTodosDatos(cajaTexto.get()))
+
+temp = Label(ventana, text = "")
+temp.grid(padx=5, pady=5, row=1000, column=1000)
+temp.after(300000, temporizador)
 
 blanco9 = Label(ventana, text = "")
 archivoInput = Entry(ventana, width=10)

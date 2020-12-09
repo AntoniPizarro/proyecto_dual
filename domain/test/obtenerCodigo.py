@@ -6,8 +6,8 @@ import requests
 
 
 def test_obtenerElMismoCodigo():
-    assert obtenerCodigo("https://proyectodual.000webhostapp.com/test-html.html") == requests.get(
-        "https://proyectodual.000webhostapp.com/test-html.html").text
+    assert obtenerCodigo("https://proyectodual.000webhostapp.com/") == requests.get(
+        "https://proyectodual.000webhostapp.com/").text
 
 
 def test_integros():

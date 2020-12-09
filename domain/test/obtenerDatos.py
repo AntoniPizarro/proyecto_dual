@@ -21,7 +21,7 @@ def test_neimoidianEscortShuttle():
 
 def test_cañoneraRepublica():
     assert obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/ca%C3%B1onera-republica.html")) == {
-        'modelo': "Cañonera de la República", 'marca': "República", 'gama': "Media", 'tasa': 25, 'color': "Blanco", 'plazas': 6, 'caracteristicas': ["Cañones de iones", "Misileros", "Cabina", "Camara de carga"]}
+        'modelo': "Cañonera de la República", 'marca': "República", 'gama': "Media", 'tasa': 25, 'color': "Blanco", 'plazas': 6, 'caracteristicas': ["Cañones de iones", "Misileros", "Cabina", "Cámara de carga"]}
 
 
 def test_cruceroAldearaan():

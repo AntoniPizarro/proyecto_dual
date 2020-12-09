@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Organización de Directorios</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Organización de Directorios</h3>
+
+        <p class="pDoc">Para la organización de directorios de nuestra app hemos seguido el estandarte convencional sugerido por nuestro mentor.<br><br>Nuestro programa se divide en 4 directorios:</p>
+
+        <h4 class="h4title">Client – Side</h4>
+
+        <p class="pDoc">En el directorio “client-side” hemos incluido todo lo relacionado con la página web a la cual pensamos ejecutar el programa de web scrapping y donde encontraremos todo el contenido visual dirigido al público consumidor. En este directorio podremos encontrar todos los archivos relacionados con los lenguajes de marcas HTML y CSS, al mismo tiempo que enlaces e imágenes que son de gran utilidad y ayuda para la correcta visualización de los servicios página web.</p>
+
+        <h4 class="h4title">Domain</h4>
+
+        <p class="pDoc">En el directorio “domain” podremos ver que su interior está subdividido en otros dos directorios distintos, uno designado con el nombre “src” y el otro como “test”.</p>
+
+        <h6 class="h6title">src</h6>
+        
+        <p class="pDoc">En el “src” podremos encontrar los archivos necesarios de configuración para poder ejecutar pytest y el archivo que contiene las funciones que ejecutarán nuestro programa</p>
+
+        <h6 class="h6title">test</h6>
+
+        <p class="pDoc">En el directorio “test” podemos encontrar los archivos de configuración para poder ejecutar pytest y también podremos localizar un archivo para cada función de nuestro programa, cada archivo será nombrado como la misma función sobre la que se ejecuta. Cada uno de estos archivos está compuesto por distintos casos test que comprobarán y se asegurarán del correcto funcionamiento de nuestro programa.</p>
+
+        <h4 class="h4title">Repository</h4>
+
+        <p class="pDoc">En este directorio podremos encontrar el archivo que hace posibilita la conexión entre nuestro programa y nuestra base de datos donde almacenaremos toda la información extraída de nuestro programa de web scrapping.
+En su interior también encontraremos otro directorio llamado mongodb, en el cual en su interior podremos encontrar el patrón de esquema que hemos seguido a  la hora de crear nuestros documentos JSON y una copia del esquema de validación que hemos definido sobre nuestra base de datos para evitar la inserción de archivos no deseados.</p>
+
+        <h4 class="h4title">Resources</h4>
+
+        <p class="pDoc">En el directorio “resoruces” hemos decidido incluir todos los recursos que hemos tenido la oportunidad de crear libremente para facilitar y agilizar el desarrollo de nuestro programa, al mismo tiempo que pensábamos que aumentaría su prestigio. En el se incluyen dos documentos python:</p>
+
+        <h6 class="h6title">Generador Web</h6>
+
+        <p class="pDoc">Generador Web, en este documento se incluye un auto generados de páginas web, para tener la oportunidad de poder generar nuevas páginas ofreciendo nuevos servicios para nuestra página web, a gran velocidad y eficiencia, manteniendo un absoluto control de los datos que decidimos incluir.</p>
+
+        <h6 class="h6title">Interface</h6>
+
+        <p class="pDoc">Interface en este documento hemos tenido la oportunidad de desarrollar una interface, para que el usuario menos experimentado y sin grandes conocimientos de programación pueda ejecutar el programa sin ningún tipo de problema. Este documento ejecuta y compone la GUI que hemos decidido incluir en nuestro programa</p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

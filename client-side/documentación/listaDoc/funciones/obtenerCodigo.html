@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="icon" type="image/png" href="../../../links/img/2_logo.png" />
+
+        <link type="text/css" rel="stylesheet" href="../../../styles.css" media="screen"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8" />
+
+        <title>Documentación: Explicación de Funciones</title>
+    </head>
+    <body class="bodyDoc">
+
+        <h1 class="titleDoc"><a href="../../documentación.html">Documentación</a></h1>
+
+        <h3 class="subTitle">Obtener Código</a></h3>
+
+        <ul class="contribuidores">
+            <li><a href="../5explicaciónFunciones.html">Explicación Funciones</a></li>
+        </ul>
+
+        <img class="imgDoc" src="../imgs/obtenerCodigo.JPG">
+
+        <p>En está función como indica su nombre nos devolvería el código web del url que nosotros le pasáramos en formato string.<br><br>
+            Al principio podemos ver que hemos definido la “url” en la variable de la cabecera. Su función es que en el caso de que trabajemos con una ruta variable, podamos poder convertirla en absoluta para poder trabajar con la librería requests y obtener el código.<br><br>
+            En la variable “inexistent” hemos definido la “url” de la página que nos daría error en el caso de que el link que hayamos metido este incompleto o no devuelva resultado alguno.<br><br>
+            Al definir el primer condicional nos aseguramos de que con la variable que trabajamos sea en formato string y tenga una longitud mínima mayor que 0 caracteres.<br><br>
+            En el segundo condicional podemos ver que su función es que en el caso de que la “url” que le pasamos a nuestro programa no pueda encontrar la extensión del protocolo “https” significará que estamos trabajando con una ruta variable, en ese caso la transformaremos a absoluta, para poder ejecutar el requests sin obtener ningún error.<br><br>
+            Obtenemos el código de nuestra “url” y lo almacenamos en la variable “r” y acto seguido almacenamos la variable “r” acompañada de “.text” para convertirla en actual texto legible.<br><br>
+            En el siguiente condicional comparamos que ambas variables sean iguales “codigoWeb” con el texto que hemos obtenido de la “url” con la que hemos ejecutado la función y la variable que contiene el código de la página de error transformado a texto legible.<br><br>
+            En el caso de que coincidan significará que la “url” con la que estamos ejecutando la función no existe o contiene un error, en ese caso no nos interesa y nos devolverá “False”, pero en caso contrario continuamos con la función finalizando en el return de “codigoWeb”.<br><br>
+            El return nos devuelve el código de la “url” con la que hemos ejecutado la función en formato string y texto legible para que podamos trabajar sobre ella.
+            </p>
+
+        <footer>
+            © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
+        </footer>
+    </body>
+</html>

@@ -2,7 +2,7 @@ from src.scrappingLinks import obtenerCodigo
 import pytest
 import requests
 
-# pytest -v test/obtenerCodigo.py
+# pytest -v test/test_obtenerCodigo.py
 
 
 def test_obtenerElMismoCodigo():

@@ -1,7 +1,7 @@
 from src.scrappingLinks import webCrawler
 import pytest
 
-# pytest -v test/webCrawler.py
+# pytest -v test/test_webCrawler.py
 
 # AQUI LOS CASOS TEST
 # DESDE CADA UNO DE LOS ENLACES DE NUESTRA PÁGINA WEB

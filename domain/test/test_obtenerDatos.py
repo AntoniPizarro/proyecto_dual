@@ -1,7 +1,7 @@
 from src.scrappingLinks import obtenerDatos, obtenerCodigo
 import pytest
 
-# pytest -v test/obtenerDatos.py
+# pytest -v test/test_obtenerDatos.py
 
 
 def test_yWing():

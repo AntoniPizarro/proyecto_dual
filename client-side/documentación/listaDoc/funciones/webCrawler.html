@@ -42,8 +42,8 @@
         En el caso de que no se encuentre invocaremos a la función obtenerCodigo, para obtener el código del link en un formato el cual podamos trabajar con el.<br><br>
         A continuación una vez obtenido el código, invocaremos a la función obtenerDatos, para recoger los datos para el cual ha sido diseñado este programa de web scrapping.<br><br>
         En el caso de que el link con el que queremos trabajar se encuentre en el interior de la lista bannedLinks, simplemente pasaremos al siguiente.<br><br>
-        Finalmente está función devolverá la lista  de los links que hemos crawleado.
-        </p>
+        Finalmente está función devolverá la lista  de los links que hemos crawleado.<br><br>
+        La función <b>webCrawler</b> funciona por el principio de <b>OCP</b> (Open Close Principle) ya que esta función tiene más de una responsabilidad y para añadirle más de una funcionalidad hemos tenido que añadir nuevo código en vez de modificar el anterior. Al inicio el objetivo de esta función era devolvernos la lista de los links ya crawleados, la lista de crawled, pero le añadimos la función de también devolver el diccionario conteniendo la información que nos interesaba y finalmente añadirla a nuestra base de datos de Mongo. Para esta nueva funcionalidad en vez de modificar el código anterior tuvimos que escribir nuevo código para poder incorporar esta nueva característica.</p>
 
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados

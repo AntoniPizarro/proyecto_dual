@@ -32,8 +32,8 @@
             Obtenemos el código de nuestra “url” y lo almacenamos en la variable “r” y acto seguido almacenamos la variable “r” acompañada de “.text” para convertirla en actual texto legible.<br><br>
             En el siguiente condicional comparamos que ambas variables sean iguales “codigoWeb” con el texto que hemos obtenido de la “url” con la que hemos ejecutado la función y la variable que contiene el código de la página de error transformado a texto legible.<br><br>
             En el caso de que coincidan significará que la “url” con la que estamos ejecutando la función no existe o contiene un error, en ese caso no nos interesa y nos devolverá “False”, pero en caso contrario continuamos con la función finalizando en el return de “codigoWeb”.<br><br>
-            El return nos devuelve el código de la “url” con la que hemos ejecutado la función en formato string y texto legible para que podamos trabajar sobre ella.
-            </p>
+            El return nos devuelve el código de la “url” con la que hemos ejecutado la función en formato string y texto legible para que podamos trabajar sobre ella.<br><br>
+            La función de  <b>obtenerCodigo</b> funciona por el principio de <b>SRP</b> (Single Responsibility Principle) ya que esta función tiene una responsabilidad única. En este caso el único objetivo de esta función es devolver el código de una ‘url’ que le pasaremos en formato de string sobre el cual podremos trabajar posteriormente.</p>
 
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados

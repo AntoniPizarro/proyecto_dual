@@ -1,10 +1,7 @@
 from src.scrappingLinks import getLinks, obtenerCodigo
 import pytest
 
-# pytest -v test/getAllLinks.py
-
-###Deberíamos dejar estos casos test o quitarlos ? ###
-####
+# pytest -v test/test_getAllLinks.py
 
 
 def test_linksOtraPaginaWebIndex():
@@ -15,7 +12,6 @@ def test_linksOtraPaginaWebIndex():
 def test_linksOtraPaginaWebMovieRank():
     assert getLinks(obtenerCodigo("https://paulk123.000webhostapp.com/movie_rank.html")
                     ) == ['Free_Lily.html', 'movie_rank.html', 'videos.html', 'audios.html']
-###
 
 
 def test_IndexLinks():

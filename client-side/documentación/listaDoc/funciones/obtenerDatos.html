@@ -32,8 +32,8 @@
         Creamos un loop que nos añada las características ofrecidas por cada servicio. Para encontrar las características utilizaremos el “slice” y el “find” como recursos igual que los hemos usado anteriormente, pero como en este caso se trata de un array de información queremos ejecutar está orden las veces necesarias hasta que ya no encuentre más características del servicio.<br><br>
         A continuación creamos un diccionario, donde cada campo del diccionario está definido por el nombre identificador de la información´
         que esperábamos obtener y cada valor de cada campo está representado con el valor de las variables con las que hemos trabajado.<br><br>
-        Finalmente está función nos devolverá toda la información del servicio que deseado en formato de diccionario, con el que nosotros posteriormente añadiremos a nuestra base de datos.
-        </p>
+        Finalmente está función nos devolverá toda la información del servicio que deseado en formato de diccionario, con el que nosotros posteriormente añadiremos a nuestra base de datos.<br><br>
+        La función <b>obtenerDatos</b> funciona por el principio de <b>SRP</b> (Single Responsibility Principle) ya que esta función tiene una responsabilidad única. En este caso el único objetivo de esta función es buscar los datos o la información que nos interesa de la página web y almacenarla en un diccionario, que más adelante guardaremos en nuestra base de datos de Mongo, aunque está funcionalidad depende de otra función y no de ella.</p>
 
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados

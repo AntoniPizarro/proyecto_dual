@@ -1,7 +1,7 @@
 from src.scrappingLinks import union
 import pytest
 
-# pytest -v test/union.py
+# pytest -v test/test_union.py
 
 
 def test_dosArrays():

@@ -38,7 +38,8 @@
         En el caso de que el link que hemos encontrado no obtenga “html” ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
         En caso e que el link se encuentre en la lista de links prohibidos, ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
         En caso contrario añadimos el link a la lista de links y ejecutamos un recorte para trabajar a partir de la última posición obtenida del “link”, ya que no queremos recoger en bucle continuamente el mismo link.<br><br>
-        Al finalizar con el bucle, nos devolverá una lista de links que incluirá todos los links sobre los cuales queremos trabajar y podemos obtener información de utilidad.</p>
+        Al finalizar con el bucle, nos devolverá una lista de links que incluirá todos los links sobre los cuales queremos trabajar y podemos obtener información de utilidad.<br><br>
+        La función <b>getLinks</b> funciona por el principio de <b>SRP</b> (Single Responsibility Principle) ya que esta función tiene una responsabilidad única. En este caso el único objetivo de esta función es lograr encontrar la posición de donde empiezan y dónde acaban los links del código HTML en formato string que le pasaremos y almacenarlos en una lista.</p>
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados
         </footer>

@@ -30,8 +30,8 @@
         Acto seguido creamos un bucle para que mire uno a uno los links obtenidos en listaLinks en la función anterior, en este caso “e” hace referencia a cada link individualmente que podamos encontrar en el interior de la lista listaLinks.<br><br>
         A continuación creamos un condicional que mire si el link con el que estamos trabajando está en la lista de toCrawl de la función webCrawler, en el caso de que no estén los links nos los irá añadiendo.<br><br>
         En caso contrario, en el caso de que el link ya se encuentre en el interior de la listLinks simplemente pasaremos a comprobar el siguiente y así sucesivamente hasta que hayamos comprobado unitariamente todos los links obtenidos en la función getAllLinks y almacenados en listLinks.<br><br>
-        Como resultado de está función obtendremos la lista “p”, que hace referencia a la lista toCrawl del crawler Web.
-        </p>
+        Como resultado de está función obtendremos la lista “p”, que hace referencia a la lista toCrawl del crawler Web.<br><br>
+        La función <b>union</b> funciona por el principio de <b>SRP</b> (Single Responsibility Principle) ya que esta función tiene una responsabilidad única. En este caso el único objetivo de esta función es trabajar como comprobante. Únicamente comprueba uno a uno que los links que nos ha devuelto la función getLinks no están ya incorporados dentro de la lista del webCrawler toCrawl. En el caso de que no se encuentren en su interior los irá añadiendo y en el caso de que ya se encuentren en su interior únicamente pasará con al siguiente hasta haber comprobado todos y cada uno de los links que se encontraban en la lista que nos devuelve la función getLinks.</p>
 
         <footer>
             © Diseño realizado por Antoni Pizarro & Pau Llinàs 2020. Todos los derechos reservados

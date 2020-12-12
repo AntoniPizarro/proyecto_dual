@@ -7,6 +7,7 @@ import pytest
 # DESDE CADA UNO DE LOS ENLACES DE NUESTRA PÁGINA WEB
 
 
+@pytest.mark.programaCrawler
 def test_indexWebPage():
     assert webCrawler("https://proyectodual.000webhostapp.com/index.html") == ['https://proyectodual.000webhostapp.com/index.html', './catalogo.html', 'transports/v-wing.html', '../catalogo.html', 'transports/imperial-shuttle.html', 'transports/gr-75.html',
                                                                                'transports/crucero-alderaan.html', 'transports/aa-9.html', 'transports/twilight.html', 'transports/cañonera-republica.html', 'transports/neimoidian-escort.html', 'transports/magna-guard.html', 'transports/t70-xwing.html', 'transports/y-wing.html']

@@ -5,6 +5,7 @@ import requests
 # pytest -v test/test_obtenerCodigo.py
 
 
+@pytest.mark.codigoIndex
 def test_obtenerElMismoCodigo():
     assert obtenerCodigo("https://proyectodual.000webhostapp.com/") == requests.get(
         "https://proyectodual.000webhostapp.com/").text

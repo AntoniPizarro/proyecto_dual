@@ -14,6 +14,7 @@ def test_linksOtraPaginaWebMovieRank():
                     ) == ['Free_Lily.html', 'movie_rank.html', 'videos.html', 'audios.html']
 
 
+@pytest.mark.enlacesIndex
 def test_IndexLinks():
     assert getLinks(obtenerCodigo("https://proyectodual.000webhostapp.com/")
                     ) == ["./catalogo.html"]

@@ -4,6 +4,7 @@ import pytest
 # pytest -v test/test_obtenerDatos.py
 
 
+@pytest.mark.datosNave
 def test_yWing():
     assert obtenerDatos(obtenerCodigo("https://proyectodual.000webhostapp.com/transports/y-wing.html")) == {
         'modelo': "Y-Wing", 'marca': "República", 'gama': "Baja", 'tasa': 15, 'color': "Blanco", 'plazas': 2, 'caracteristicas': ["Torpedos", "Hipervelocidad", "Cabina"]}

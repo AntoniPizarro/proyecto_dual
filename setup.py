@@ -28,6 +28,6 @@ setuptools.setup(
         'idna==2.10',
         'pymongo==3.11.2',
         'requests==2.25.0',
-        'urllib3==1.26.2'
+        'urllib3==1.26.4'
     ],
 )

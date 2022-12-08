@@ -23,7 +23,7 @@ setuptools.setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        'certifi==2020.12.5',
+        'certifi==2022.12.7',
         'chardet==3.0.4',
         'idna==2.10',
         'pymongo==3.11.2',
